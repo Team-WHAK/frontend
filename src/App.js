@@ -4,7 +4,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Edit from "./pages/Edit"
 import Home from "./pages/Home"
-import Index from "./pages/IndexPage"
+import IndexPage from "./pages/IndexPage"
 import LogIn from "./pages/LogIn"
 import New from "./pages/New"
 import NotFound from "./pages/NotFound"
@@ -17,15 +17,17 @@ function App() {
   return (
     <>
       <Header />
-      <Edit />
-      <Home />
-      <Index />
-      <LogIn />
-      <New />
-      <NotFound />
-      <ProtectedIndex />
-      <Show />
-      <SignUp />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/indexpage" element={<IndexPage  />} />
+        <Route path="/show" element={<Show  />} />
+        <Route path="/edit" element={<Edit  />} />
+        <Route path="/new" element={<New  />} />
+        <Route path="/notfound" element={<NotFound  />} />
+        <Route path="/protectedIndex" element={<ProtectedIndex  />} />
+      </Routes>
       <Footer />
     </>
   );

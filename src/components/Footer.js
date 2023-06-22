@@ -1,10 +1,14 @@
 import React from "react";
+import {Navbar} from "reactstrap"
+
 
 const Footer = () => {
     return (
-        <>
-            <h1>Footer</h1>
-        </>
+        <div className='footer-container'>
+        <Navbar fixed="bottom">
+            &copy; HoneyHome Inc. | 2023
+        </Navbar>
+      </div>
     )
 }
 
