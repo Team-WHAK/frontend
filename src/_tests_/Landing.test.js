@@ -1,15 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import Header from "../components/Header";
+import Landing from "../pages/Landing";
 
-describe("<Header />", () => {
+describe("<Landing />", () => {
   it("has an image and attributes assigned to it", () => {
     render(
       <BrowserRouter>
-        <Header />
+        <Landing />
       </BrowserRouter>
     )
-    const imgAlt = screen.getByAltText(/Logo/i);
-    expect(imgAlt).toHaveAttribute("alt", "Logo");
+    const imgAlt = screen.getByAltText(/house/i);
+    expect(imgAlt).toHaveAttribute("alt", "house");
   })
 })
