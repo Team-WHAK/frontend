@@ -1,4 +1,4 @@
-init code:
+## init code:
 
 import React from 'react';
 
@@ -13,7 +13,7 @@ const \name\ = () => {
 export default \name\;
 
 
-Init Header:
+## Init Header:
 
 import React from 'react';
 import { Navbar, Nav } from 'rsuite';
@@ -58,7 +58,7 @@ export default Header;
 
 
 
-INIT Footer:
+## INIT Footer:
 
 import React from 'react';
 import { Navbar, Nav } from 'rsuite';
@@ -169,4 +169,64 @@ Icebox Links code:
                         </ul>
                     </div>
 
-            </div> */} 
+            </div> 
+
+## HOME Content
+ The panels are clickable and the routes can change to what we need
+
+Note: This is for CurrentUser
+
+import React, {useState} from "react";
+import ReactDOM from 'react-dom';
+import { Panel, Placeholder, Grid, Row, Col } from 'rsuite';
+import '../styles/Home.css';
+
+const Card = ({ title }) => (
+  <Panel bordered header={title} className="card">
+    <Placeholder.Paragraph />
+  </Panel>
+);
+
+const Home = ({currentUser}) => {
+  return (
+    <div id='portal'>
+      <h1 className='welcome' style={{ display: 'flex', justifyContent: 'center', gap: '3vw', }}>Welcome {currentUser} </h1>
+      <div className="container">
+        <a href="/users/tasks">
+          <Card title="My Tasks"/>
+        </a>
+        <a href="/users/calendar">
+          <Card title="My Calendar"/>
+        </a>
+        <a href="/tasks/add">
+          <Card title="Add Task"/>
+        </a>
+        <a href="/live-agent">
+          <Card title="Live Agent"/>
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
+
+// AFTER SIGNIN
+
+
+## Not Found:
+
+Has ...
+<div id='container'>
+<div className='txt'>
+<h1>Honey, you’ve stumbled onto a page that doesn’t exist. But don’t buzz off just yet! Come back to the hive, and join the colony. </h1>
+</div>
+<div className='returnBtn'>
+<button></button>
+</div>
+<div className='cutePics'>
+<img src='https://i.imgur.com/840884.png' alt='bee' />
+<img src='https://i.imgur.com/840884.png' alt='bee' />
+</div>
+</div>
