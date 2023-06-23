@@ -1,72 +1,79 @@
 .logo {
-    height: 6vw; /* Relative to viewport width */
-    width: 6vw; /* Relative to viewport width */
+  height: 6vw;
+  /* Relative to viewport width */
+  width: 6vw;
+  /* Relative to viewport width */
 
-  }
-  
-  #nav {
-    color: white;
-    background-color: black;
-    font-size: 2vw; /* Relative to viewport width */
-    font-family: 'Alegreya';
-    display: grid;
-    grid-template-columns: auto 1fr; /* Adjust the column sizes as per your preference */
-    align-items: center;
-    padding: 0 2vw; /* Adjust the padding as per your preference */
-    padding: 10px;
-  }
-  
-  .left {
-    display: flex;
-    align-items: center;
-    gap: 2vw; /* Adjust the gap between items as per your preference */
-    margin-left: 3vw;
-  }
-  
-  .right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 2vw;
-    margin-right: 3vw;
-  }
-  
-  .NavItem {
-    margin-left: 1vw; /* Adjust the margin as per your preference */
-  }
-  
-  #landing {
-    background-color: black;
-    display: flex;
-    gap: 12%;
-    justify-content: center;
-    padding-top: 4vw;
-  }
-  
-  .title {
-    color: #fad615;
-    font-size: 7vw;
-    margin-top: 12vh;
-  }
-  
-  .title2 {
-    color: white;
-    margin-left: 60%;
-    margin-top: 3vh;
-    font-size: 6vw;
-  }
-  
-  .title-position {
-    margin-left: 9%;
-  }
-  
-  .pic-position {
-    margin-top: -6vw;
-    margin-right: 7vw;
-  }
-  
-  .pic {
-    height: 50vw;
-    width: 50vw;
-    max-width: 100%;
-  }
+}
+
+#nav {
+  color: white;
+  background-color: black;
+  font-size: 2vw;
+  /* Relative to viewport width */
+  font-family: 'Alegreya';
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* Adjust the column sizes as per your preference */
+  align-items: center;
+  padding: 0 2vw;
+  /* Adjust the padding as per your preference */
+  padding: 10px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  /* Adjust the gap between items as per your preference */
+  margin-left: 3vw;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2vw;
+  margin-right: 3vw;
+}
+
+.NavItem {
+  margin-left: 1vw;
+  /* Adjust the margin as per your preference */
+}
+
+#landing {
+  background-color: black;
+  display: flex;
+  gap: 12%;
+  justify-content: center;
+  padding-top: 4vw;
+}
+
+.title {
+  color: #fad615;
+  font-size: 7vw;
+  margin-top: 12vh;
+}
+
+.title2 {
+  color: white;
+  margin-left: 60%;
+  margin-top: 3vh;
+  font-size: 6vw;
+}
+
+.title-position {
+  margin-left: 9%;
+}
+
+.pic-position {
+  margin-top: -6vw;
+  margin-right: 7vw;
+}
+
+.pic {
+  height: 50vw;
+  width: 50vw;
+  max-width: 100%;
+}

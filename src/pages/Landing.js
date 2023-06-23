@@ -1,7 +1,5 @@
 import React from 'react';
 import { Container, Content, Grid, Row, Col, Panel, } from 'rsuite';
-import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
-
 import '../styles/Landing.css';
 
 const Landing = () => {
@@ -71,53 +69,53 @@ const Landing = () => {
         </div>
 
         <div id='boxes'>
-            
-            <div className='box1'>
-                <h2> Join the Team</h2>
-                <p>Become a member</p>
-                <button className='link-btn'>{' > '}</button>
-            </div>
 
-            <br />
-            <br />
+          <div className='box1'>
+            <h2> Join the Team</h2>
+            <p>Become a member</p>
+            <button className='link-btn'>{' > '}</button>
+          </div>
 
-            <div className='box2'>
-                <h2> Stay on Task</h2>
-                <p>Become a member</p>
-                <button>{' > '}</button>
-            </div>
+          <br />
+          <br />
 
-            <br />
-            <br />
+          <div className='box2'>
+            <h2> Stay on Task</h2>
+            <p>Become a member</p>
+            <button>{' > '}</button>
+          </div>
 
-            <div className='box3'>
-                <h2> Responsive experiance</h2>
-                <p>Become a member</p>
-                <button>{' > '}</button>
-            </div>
+          <br />
+          <br />
+
+          <div className='box3'>
+            <h2> Responsive experiance</h2>
+            <p>Become a member</p>
+            <button>{' > '}</button>
+          </div>
 
         </div>
 
 
         <div id='message'>
 
-            <div className='ready'>
-                <h2>Ready to become a home maintenance master? Maximize your home's value and organization today! </h2>
-            </div>
+          <div className='ready'>
+            <h2>Ready to become a home maintenance master? Maximize your home's value and organization today! </h2>
+          </div>
 
-            <div className='btns'>
-                <button className='B1'>Sign Up</button>
-                <button className='B2'>Demo</button>
-            </div>
+          <div className='btns'>
+            <button className='B1'>Sign Up</button>
+            <button className='B2'>Demo</button>
+          </div>
 
         </div>
 
 
         <div id='fam-img'>
-            <img src="/images/family.jpeg" alt='family' className='fam'/>
+          <img src="/images/family.jpeg" alt='family' className='fam' />
         </div>
 
-        </Content>
+      </Content>
     </Container>
   );
 };
