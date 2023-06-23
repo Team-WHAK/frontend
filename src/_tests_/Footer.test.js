@@ -8,8 +8,8 @@ describe("<Footer />", () => {
       <BrowserRouter>
         <Footer />
       </BrowserRouter>
-    );
+    )
     const textElement = screen.getByText(/© Whak inc. 2023. All rights reserved./i);
     expect(textElement).toBeInTheDocument();
-  });
+  })
 })

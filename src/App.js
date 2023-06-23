@@ -27,7 +27,7 @@ function App() {
         <Route path="/show" element={<Show  />} />
         <Route path="/edit" element={<Edit  />} />
         <Route path="/new" element={<New  />} />
-        <Route path="/notfound" element={<NotFound  />} />
+        <Route path="*" element={<NotFound  />} />
         <Route path="/protectedIndex" element={<ProtectedIndex  />} />
       </Routes>
       <Footer />

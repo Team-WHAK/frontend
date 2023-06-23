@@ -4,13 +4,12 @@ import Header from "../components/Header";
 
 describe("<Header />", () => {
   it("has an image and attributes assigned to it", () => {
-      render(
+    render(
       <BrowserRouter>
-      <Header />
+        <Header />
       </BrowserRouter>
-      )
-      const imgAlt = screen.getByAltText(/Logo/i);
-      expect(imgAlt).toHaveAttribute("alt", "Logo");
-    })
-  });
-
+    )
+    const imgAlt = screen.getByAltText(/Logo/i);
+    expect(imgAlt).toHaveAttribute("alt", "Logo");
+  })
+})
