@@ -97,13 +97,13 @@ const New = ({ createTask, currentUser }) => {
             value={newTask["Due date"]}
           />
         </Form.Group>
-<div className='btnPos'>
-        <Button onClick={handleSubmit}>
-          Submit New Task
-        </Button>
-        <Button onClick={handleCancel}>
-          Cancel
-        </Button>
+        <div className='btnPos'>
+          <Button onClick={handleSubmit}>
+            Submit New Task
+          </Button>
+          <Button onClick={handleCancel}>
+            Cancel
+          </Button>
         </div>
       </Form>
     </div>
