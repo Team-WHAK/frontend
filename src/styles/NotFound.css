@@ -1,0 +1,32 @@
+#container{
+    background-color: #eebd43;
+    padding-top: 9vw;
+}
+.txt{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 39vw;
+margin: 0 auto;
+font-family: 'Alegreya';
+}
+.returnBtn{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 3vw;
+}
+/* .cutePics{
+
+} */
+.pic1{
+height: 25vw;
+
+
+}
+.pic2{
+width: 30vw;
+margin-bottom: 43%;
+z-index: 1;
+margin-left: 23vw;
+}
