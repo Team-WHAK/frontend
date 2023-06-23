@@ -9,7 +9,7 @@ describe("<Footer />", () => {
         <Footer />
       </BrowserRouter>
     );
-    const textElement = screen.getByText(/HoneyHome/i);
+    const textElement = screen.getByText(/© Whak inc. 2023. All rights reserved./i);
     expect(textElement).toBeInTheDocument();
   });
 })

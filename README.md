@@ -1,70 +1,172 @@
-# Getting Started with Create React App
+init code:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+import React from 'react';
 
-## Available Scripts
 
-In the project directory, you can run:
+const \name\ = () => {
+    return (
+        <>
+        </>
+    )
+}
 
-### `yarn start`
+export default \name\;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Init Header:
 
-### `yarn test`
+import React from 'react';
+import { Navbar, Nav } from 'rsuite';
+import '../styles/Header.css';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+const Header = () => {
+  return (
+    <>
+<Navbar id='nav'>
+<Nav className='left'>
+<img src="/images/logo.jpeg" alt="Logo" className="logo" />
+<Nav.Item href=''>Home</Nav.Item>
+<Nav.Item href=''>About Us</Nav.Item>
+<Nav.Item href=''>Contact</Nav.Item>
+</Nav>
+<Nav className='right'>
+<Nav.Item href=''>Sign In</Nav.Item>
+<Nav.Item href=''>Sign Up</Nav.Item>
+</Nav>
+</Navbar>
+ <Container>
+      <Content>
+        <div id="landing">
 
-### `yarn build`
+          <div className="title-position">
+            <h1 className="title">HoneyHome</h1>
+            <h1 className="title2">Tracker</h1>
+          </div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+          <div className="pic-position">
+            <img src="/images/landing.jpeg" alt="pic" className="pic" />
+          </div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        </div>
+    </Container>
+ </Content>
+ </>
+  );
+};
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default Header;
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+INIT Footer:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+import React from 'react';
+import { Navbar, Nav } from 'rsuite';
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+import '../style/Footer.css';
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const Footer = () => {
+    return (
+   <Navbar id='footer'>
+   <Nav className='TM'>
+    <Nav.Item> © Whak inc. 2023. All rights reserved. </Nav.Item>
+    </Nav>
+   </Navbar>  
+    )
+}
 
-### Code Splitting
+export default Footer;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## We are going to Need a Landing Page for when the user is not Signed in 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+sections from wire frame: 8 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<div>
+2 X <h1>
+<img />
+</div>
 
-### Advanced Configuration
+<div>
+<h2>
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<div>
+<h1></h1>
+3 X <h2>
+<img />
+</div>
 
-### Deployment
+<div>
+3 X <h3>
+3 X <h4>
+3 X <button>
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<div>
+<h2>
+2 X <button>
+</div>
 
-### `yarn build` fails to minify
+<div>
+<img />
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div>
+9 X Links
+</div>
+
+<div>
+<img />
+3 X Links
+</div>
+
+
+Icebox Links code:
+
+                <div className='R1'>
+                    <ul style={{ display: 'flex', justifyContent: 'center', gap:'30vw', listStyleType: 'none' }}>
+                        <li>
+                            <a href= '' target='' rel=''>Products</a>
+                        </li>
+                        <li>
+                            <a href= '' target='' rel=''>FAQ</a>
+                        </li>
+                        <li>
+                            <a href= '' target='' rel=''>Legal</a>
+                        </li>
+                    </ul>
+                </div>
+
+                    <div className='R2' >
+                        <ul style={{ display: 'flex', justifyContent: 'center', gap:'28vw', listStyleType: 'none' }}>
+                            <li>
+                                <a href= '' target='' rel=''>Scheduling</a>
+                            </li>
+                            <li>
+                                <a href= '' target='' rel=''>Contact</a>
+                            </li>
+                            <li>
+                                <a href= '' target='' rel=''>Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className='R3'>
+                        <ul style={{ display: 'flex', justifyContent: 'center', gap:'25vw', listStyleType: 'none' }}>
+                            <li>
+                                <a href= '' target='' rel=''>Support</a>
+                            </li>
+                            <li>
+                                <a href= '' target='' rel=''>Testimonials</a>
+                            </li>
+                            <li>
+                                <a href= '' target='' rel=''>Terms&Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+
+            </div> */} 

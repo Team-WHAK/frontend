@@ -1,0 +1,47 @@
+#footer{
+    background-color: black;
+    color: white;
+    text-align: left;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#links{
+    background-color: #f4d145;
+    padding-top: 12vw;
+    padding-bottom: 3vw;
+    font-family: 'Alegreya';
+}
+
+.R1{
+
+}
+
+.R2{
+
+}
+
+.R3{
+
+}
+
+
+
+#conc{
+    background-color: #f4d145;
+    padding-top: 12vw;
+    padding-bottom: 3vw;
+}
+
+.person{
+    height:18vw;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.soc{
+    padding-top: 3vw;
+}
