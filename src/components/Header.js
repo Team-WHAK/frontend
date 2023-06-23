@@ -7,14 +7,14 @@ const Header = () => {
     <>
       <Navbar id='nav'>
         <Nav className='left'>
-          <img src="/images/logo.jpeg" alt="Logo" className="logo" />
-          <Nav.Item href=''>Home</Nav.Item>
-          <Nav.Item href=''>About Us</Nav.Item>
-          <Nav.Item href=''>Contact</Nav.Item>
+          <img src="/images/logo.jpeg" alt="Logo" className="logo"  />
+          <Nav.Item href=''style={{color:'#ffffff'}}>Home</Nav.Item>
+          <Nav.Item href=''style={{color:'#ffffff'}}>About Us</Nav.Item>
+          <Nav.Item href=''style={{color:'#ffffff'}}>Contact</Nav.Item>
         </Nav>
         <Nav className='right'>
-          <Nav.Item href=''>Sign In</Nav.Item>
-          <Nav.Item href=''>Sign Up</Nav.Item>
+          <Nav.Item href='' style={{color:'#ffffff'}}>Sign In</Nav.Item>
+          <Nav.Item href='' style={{color:'#ffffff'}}>Sign Up</Nav.Item>
         </Nav>
       </Navbar>
       <Container>
