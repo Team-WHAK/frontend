@@ -1,0 +1,48 @@
+#contact{
+    background-color: #eebd43;
+    padding-top: 6vw;
+    padding-bottom: 6vw; 
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .snd{
+    text-align: start;
+    margin-bottom: 20px;
+    color: #992509;
+    font-family: 'Eczar SemiBold';
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type='submit'] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #992509;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

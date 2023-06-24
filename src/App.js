@@ -12,6 +12,7 @@ import ProtectedIndex from "./pages/ProtectedIndex"
 import Show from "./pages/Show"
 import SignUp from "./pages/SignUp"
 import Landing from './pages/Landing'
+import ContactForm from './pages/ContactForm'
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/show" element={<Show  />} />
         <Route path="/edit" element={<Edit  />} />
         <Route path="/new" element={<New  />} />
+        <Route path ="/contact" element={<ContactForm />} />
         <Route path="*" element={<NotFound  />} />
         <Route path="/protectedIndex" element={<ProtectedIndex  />} />
       </Routes>

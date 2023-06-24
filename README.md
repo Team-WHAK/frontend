@@ -230,3 +230,6 @@ Has ...
 <img src='https://i.imgur.com/840884.png' alt='bee' />
 </div>
 </div>
+
+
+## NEED TO MAKE IT SO THAT THE USER NEEDS TO BE LOGGED IN INORDER TO SEE THE HOME PAGE AND OTHER CONTENT ASSOCIATED.
