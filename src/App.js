@@ -12,7 +12,8 @@ import ProtectedIndex from "./pages/ProtectedIndex"
 import Show from "./pages/Show"
 import SignUp from "./pages/SignUp"
 import Landing from './pages/Landing'
-import './App.css';
+
+
 
 function App() {
   return (
