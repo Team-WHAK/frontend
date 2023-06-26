@@ -15,6 +15,9 @@
   border: 1px solid black;
   box-shadow: 2em 5em 5em black;
   padding: 3vw;
+
+  padding-top: 9vw;
+  padding-bottom: 9vw;
 }
 
 .btnPos {

@@ -1,4 +1,4 @@
-#portal{
+#portal {
   background-color: #eebd43;
   padding-top: 6vw;
   padding-bottom: 6vw;
@@ -18,8 +18,8 @@
   height: 27vw !important;
   background-color: #dc9427 !important;  
 }
-  
-.welcome{
+
+.welcome {
   font-family: 'Eczar SemiBold';
   font-size: 4vw;
   padding: 3vw;

@@ -1,9 +1,9 @@
-#container{
+#container {
   background-color: #eebd43;
   padding-top: 9vw;
 }
 
-.txt{
+.txt {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
   font-family: 'Alegreya';
 }
 
-.returnBtn{
+.returnBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
   height: 25vw;
 }
 
-.pic2{
+.pic2 {
   width: 30vw;
   margin-bottom: 43%;
   z-index: 1;
