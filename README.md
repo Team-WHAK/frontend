@@ -1,4 +1,4 @@
-init code:
+## init code:
 
 import React from 'react';
 
@@ -13,7 +13,7 @@ const \name\ = () => {
 export default \name\;
 
 
-Init Header:
+## Init Header:
 
 import React from 'react';
 import { Navbar, Nav } from 'rsuite';
@@ -58,7 +58,7 @@ export default Header;
 
 
 
-INIT Footer:
+## INIT Footer:
 
 import React from 'react';
 import { Navbar, Nav } from 'rsuite';
@@ -169,4 +169,177 @@ Icebox Links code:
                         </ul>
                     </div>
 
+<<<<<<< HEAD
             </div> */} 
+
+## NEW
+We are going to need a modal
+
+const TaskNew = ({ createTask, currentUser}) => {
+  const [newTask, setNewTask] = useState({
+    Area: "",
+    Item: "",
+    Image: "",
+    Task: "",
+    Description: "",
+    Frequency: "",
+    Due date: "",
+    user_id: currentUser?.id
+  });
+
+const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setNewTask({ ...newTask, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = () => {
+    createTask(newTask);
+    navigate("/taskIndex");
+  };
+
+      <>
+      <Form className="formstyle">
+        <FormGroup>
+          <Label for="area">Area</Label>
+          <Input
+            type="text"
+            name="area"
+            onChange={handleChange}
+            value={newTask.area}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="item">Item</Label>
+          <Input
+            type="text"
+            name="item"
+            onChange={handleChange}
+            value={newTask.item}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="image">Image</Label>
+          <Input
+            type="text"
+            name="image"
+            onChange={handleChange}
+            value={newTask.image}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="task">Task</Label>
+          <Input
+            type="text"
+            name="task"
+            onChange={handleChange}
+            value={newTask.task}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="task_description">Description</Label>
+          <Input
+            type="text"
+            name="task_description"
+            onChange={handleChange}
+            value={newTask.task_description}
+          />
+        </FormGroup>
+
+        <FormGroup>
+  <Label for="frequency">Frequency</Label>
+  <Input
+    type="text"
+    name="frequency"
+    onChange={handleChange}
+    value={newTask.frequency}
+  />
+</FormGroup>
+
+
+        <FormGroup>
+          <Label for="due_date">Due Date</Label>
+          <Input
+            type="text"
+            name="due_date"
+            onChange={handleChange}
+            value={newTask.due_date}
+          />
+        </FormGroup>
+
+       
+</FormGroup>
+</Form>
+<Button color="primary" onClick={handleSubmit} name="submit">
+  Submit New Task
+</Button>
+</>
+);
+};
+=======
+            </div> 
+
+## HOME Content
+ The panels are clickable and the routes can change to what we need
+
+Note: This is for CurrentUser
+
+import React, {useState} from "react";
+import ReactDOM from 'react-dom';
+import { Panel, Placeholder, Grid, Row, Col } from 'rsuite';
+import '../styles/Home.css';
+
+const Card = ({ title }) => (
+  <Panel bordered header={title} className="card">
+    <Placeholder.Paragraph />
+  </Panel>
+);
+
+const Home = ({currentUser}) => {
+  return (
+    <div id='portal'>
+      <h1 className='welcome' style={{ display: 'flex', justifyContent: 'center', gap: '3vw', }}>Welcome {currentUser} </h1>
+      <div className="container">
+        <a href="/users/tasks">
+          <Card title="My Tasks"/>
+        </a>
+        <a href="/users/calendar">
+          <Card title="My Calendar"/>
+        </a>
+        <a href="/tasks/add">
+          <Card title="Add Task"/>
+        </a>
+        <a href="/live-agent">
+          <Card title="Live Agent"/>
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
+
+// AFTER SIGNIN
+
+
+## Not Found:
+
+Has ...
+<div id='container'>
+<div className='txt'>
+<h1>Honey, you’ve stumbled onto a page that doesn’t exist. But don’t buzz off just yet! Come back to the hive, and join the colony. </h1>
+</div>
+<div className='returnBtn'>
+<button></button>
+</div>
+<div className='cutePics'>
+<img src='https://i.imgur.com/840884.png' alt='bee' />
+<img src='https://i.imgur.com/840884.png' alt='bee' />
+</div>
+</div>
+>>>>>>> 1c3b0d47fa4d1c2a1e502a8f7f576360213d7bf3

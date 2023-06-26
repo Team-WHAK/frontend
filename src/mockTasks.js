@@ -1,4 +1,4 @@
-let mockShacks = [
+let mockTasks = [
   {
     id: 1,
     area: "Kitchen",
