@@ -12,12 +12,11 @@
   margin-top: 20px;
 
 }
-
+  
 .card {
-  width: 39vw;
-  height: 32vw !important;
-  background-color: #dc9427 !important;
-
+  width: 33vw; 
+  height: 27vw !important;
+  background-color: #dc9427 !important;  
 }
 
 .welcome {

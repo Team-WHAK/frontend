@@ -1,7 +1,25 @@
-import New from "../pages/New";
+import { render, screen, fireEvent } from '@testing-library/react';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
+import New from '../pages/New';
 
-describe("<New />", () => {
-  it("", () => {});
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: jest.fn(),
+}));
 
-  expect(element).toBeInTheDocument();
+describe('<New />', () => {
+  it('handles cancellation', () => {
+    const navigate = jest.fn();
+    useNavigate.mockReturnValue(navigate);
+
+    render(
+      <BrowserRouter>
+        <New createTask={jest.fn()} currentUser={{ id: 1 }} />
+      </BrowserRouter>
+    );
+
+    fireEvent.click(screen.getByText('Cancel'));
+
+    expect(navigate).toHaveBeenCalledWith('/index');
+  });
 });

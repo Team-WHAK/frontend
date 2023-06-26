@@ -14,13 +14,13 @@ const Home = ({currentUser}) => {
     <div id='portal'>
       <h1 className='welcome' style={{ display: 'flex', justifyContent: 'center', gap: '3vw', }}>Welcome {currentUser} </h1>
       <div className="container">
-        <a href="/new">
+        <a href="/">
           <Card title="My Tasks"/>
         </a>
         <a href="/users/calendar">
           <Card title="My Calendar"/>
         </a>
-        <a href="/tasks/add">
+        <a href="/new">
           <Card title="Add Task"/>
         </a>
         <a href="/live-agent">
