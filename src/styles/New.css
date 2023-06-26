@@ -1,20 +1,20 @@
-#form{
-    background-color: #eebd43;
-    padding-top: 9vw;
-   padding-bottom: 9vw;
+#form {
+  background-color: #eebd43;
+  padding-top: 9vw;
+  padding-bottom: 9vw;
 }
 
-.formstyle{
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
-    align-items: center;
+.formstyle {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  align-items: center;
 }
 
-.btnPos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:5vw;
-    padding-top: 9vw;
+.btnPos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  padding-top: 9vw;
 }
