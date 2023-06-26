@@ -2,7 +2,6 @@
   background-color: #eebd43;
   padding-top: 9vw;
 }
-<<<<<<< HEAD
 
 .txt {
   display: flex;
@@ -24,28 +23,6 @@
 
 .pic1 {
   height: 25vw;
-=======
-.txt{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 39vw;
-margin: 0 auto;
-font-family: 'Alegreya';
-}
-.returnBtn{
-display: flex;
-justify-content: center;
-align-items: center;
-padding-top: 3vw;
-}
-/* .cutePics{
-
-} */
-
-.pic1{
-height: 25vw;
->>>>>>> ff9adc8c438ff04cd979e01a34c8c14410648423
 
 
 }
