@@ -6,7 +6,7 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   const handleReturnHome = () => {
-    navigate('/');
+    navigate('/:id');
   };
   return (
     <div id='container'>

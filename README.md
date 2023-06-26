@@ -169,6 +169,118 @@ Icebox Links code:
                         </ul>
                     </div>
 
+<<<<<<< HEAD
+            </div> */} 
+
+## NEW
+We are going to need a modal
+
+const TaskNew = ({ createTask, currentUser}) => {
+  const [newTask, setNewTask] = useState({
+    Area: "",
+    Item: "",
+    Image: "",
+    Task: "",
+    Description: "",
+    Frequency: "",
+    Due date: "",
+    user_id: currentUser?.id
+  });
+
+const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setNewTask({ ...newTask, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = () => {
+    createTask(newTask);
+    navigate("/taskIndex");
+  };
+
+      <>
+      <Form className="formstyle">
+        <FormGroup>
+          <Label for="area">Area</Label>
+          <Input
+            type="text"
+            name="area"
+            onChange={handleChange}
+            value={newTask.area}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="item">Item</Label>
+          <Input
+            type="text"
+            name="item"
+            onChange={handleChange}
+            value={newTask.item}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="image">Image</Label>
+          <Input
+            type="text"
+            name="image"
+            onChange={handleChange}
+            value={newTask.image}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="task">Task</Label>
+          <Input
+            type="text"
+            name="task"
+            onChange={handleChange}
+            value={newTask.task}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="task_description">Description</Label>
+          <Input
+            type="text"
+            name="task_description"
+            onChange={handleChange}
+            value={newTask.task_description}
+          />
+        </FormGroup>
+
+        <FormGroup>
+  <Label for="frequency">Frequency</Label>
+  <Input
+    type="text"
+    name="frequency"
+    onChange={handleChange}
+    value={newTask.frequency}
+  />
+</FormGroup>
+
+
+        <FormGroup>
+          <Label for="due_date">Due Date</Label>
+          <Input
+            type="text"
+            name="due_date"
+            onChange={handleChange}
+            value={newTask.due_date}
+          />
+        </FormGroup>
+
+       
+</FormGroup>
+</Form>
+<Button color="primary" onClick={handleSubmit} name="submit">
+  Submit New Task
+</Button>
+</>
+);
+};
+=======
             </div> 
 
 ## HOME Content
@@ -230,3 +342,4 @@ Has ...
 <img src='https://i.imgur.com/840884.png' alt='bee' />
 </div>
 </div>
+>>>>>>> 1c3b0d47fa4d1c2a1e502a8f7f576360213d7bf3
