@@ -1,22 +1,30 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import LogIn from '../pages/LogIn';
 
 describe('LogIn', () => {
-  it('should render the login form', () => {
+  
+  beforeEach(() => {
     render(
       <BrowserRouter>
         <LogIn />
       </BrowserRouter>
     );
+  }); 
 
-    const emailInput = screen.getByLabelText('Email:');
-    const passwordInput = screen.getByLabelText('Password:');
-    const loginButton = screen.getByRole('button', { name: 'Login' });
+  it('should render the login form with email input', () => {
+    const emailInput = screen.getByLabelText('Email:')
+    expect(emailInput).toBeInTheDocument()
+  })
 
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
-    expect(loginButton).toBeInTheDocument();
-  });
+  it('should render the login form with password input', () => {
+    const passwordInput = screen.getByLabelText('Password:')
+    expect(passwordInput).toBeInTheDocument()
+  })
+
+  it('should render the login form with log in button', () => {
+    const loginButton = screen.getByRole('button', { name: 'Login' })
+    expect(loginButton).toBeInTheDocument()
+  })
 }) 

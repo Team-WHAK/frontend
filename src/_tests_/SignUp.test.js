@@ -1,24 +1,35 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import SignUp from '../pages/SignUp';
 
 describe('SignUp', () => {
-  it('should render the signup form', () => {
+  
+  beforeEach(() => {
     render(
       <BrowserRouter>
         <SignUp />
       </BrowserRouter>
     );
+  }); 
 
-    const emailInput = screen.getByLabelText('Email:');
-    const passwordInput = screen.getByLabelText('Password:');
-    const confirmPasswordInput = screen.getByLabelText('Confirm Password:');
-    const submitButton = screen.getByRole('button', { name: 'Submit' });
+  it('should render the signup form with email input', () => {
+    const emailInput = screen.getByLabelText('Email:')
+    expect(emailInput).toBeInTheDocument()
+  })
 
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
-    expect(confirmPasswordInput).toBeInTheDocument();
-    expect(submitButton).toBeInTheDocument();
-  });
+  it('should render the signup form with password input', () => {
+    const passwordInput = screen.getByLabelText('Password:')
+    expect(passwordInput).toBeInTheDocument()
+  })  
+
+  it('should render the signup form with confirm password input', () => {
+    const confirmPasswordInput = screen.getByLabelText('Confirm Password:')
+    expect(confirmPasswordInput).toBeInTheDocument()
+  }) 
+
+  it('should render the signup form with submit button', () => {
+    const submitButton = screen.getByRole('button', { name: 'Submit' })
+    expect(submitButton).toBeInTheDocument()
+  }) 
 }) 
