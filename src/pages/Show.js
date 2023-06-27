@@ -2,12 +2,13 @@ import React from 'react';
 import { Panel, Button } from 'rsuite';
 import { useParams, Link, NavLink } from 'react-router-dom';
 import mockTasks from '../mockTasks';
-import '../styles/Show.css';
+
 
 const { Paragraph, Header, Title, Body } = Panel;
 
 const Show = ({ tasks, deleteTask, logged_in, currentUser }) => {
-  const { id } = useParams();
+  const { id } = useParams()
+  const task = mockTasks.find((item) => item.id === +id);
   let currentTask = tasks?.find((task) => task.id === +id);
 
   const handleDelete = () => {
@@ -15,7 +16,7 @@ const Show = ({ tasks, deleteTask, logged_in, currentUser }) => {
   };
 
   if (!currentTask) {
-    return <div>Loading...</div>; // Add loading state or handle the case when currentTask is undefined
+    return <div>Loading...</div>
   }
 
   return (
@@ -26,12 +27,12 @@ const Show = ({ tasks, deleteTask, logged_in, currentUser }) => {
       </Header>
       <Body>
         <Title>{currentTask.task_name}</Title>
+        <img src= {task.img} alt = {task.name} height="240" />
         <Paragraph>{currentTask.task_descr}</Paragraph>
         <Paragraph>Frequency: {currentTask.frequency}</Paragraph>
         <Paragraph>Due Date: {currentTask.due_date}</Paragraph>
         {logged_in && currentUser.id === currentTask.user_id && (
           <>
-            <Link to={`/show/${currentTask.id}`}>Add to Favorites</Link>
             <Button className="show-buttons">
               <NavLink to={`/edit/${id}`} className="show-link">
                 Edit Task

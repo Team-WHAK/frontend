@@ -18,7 +18,6 @@ const SignUp = () => {
 
     mockUsers.push(newUser); 
 
-    console.log(newUser);
     navigate("/:id");
     e.target.reset();
   };
