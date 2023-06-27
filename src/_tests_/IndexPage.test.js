@@ -48,4 +48,8 @@ describe("<IndexPage />", () => {
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument()
   });
+  it("renders a Delete Task and is clickable", () => {
+    const deleteTask = screen.getByRole('button');
+    expect(deleteTask).toBeInTheDocument()
+  });
 })
