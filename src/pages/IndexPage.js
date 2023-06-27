@@ -1,69 +1,28 @@
-import React, { useState } from 'react';
-import { Panel, PanelGroup } from 'rsuite';
+import React from 'react';
+import { Panel, Button } from 'rsuite';
 import { Link } from 'react-router-dom';
 import mockTasks from '../mockTasks';
-import '../styles/IndexPage.css';
-
 const IndexPage = () => {
-  const [expandedCards, setExpandedCards] = useState([]);
-
-  const toggleCardExpansion = (cardId) => {
-    if (expandedCards.includes(cardId)) {
-      setExpandedCards(expandedCards.filter((id) => id !== cardId));
-    } else {
-      setExpandedCards([...expandedCards, cardId]);
-    }
-  };
-  
-  const renderTaskCards = () => {
-    return mockTasks.map((task) => {
-      const isExpanded = expandedCards.includes(task.id);
-      const cardContentClassName = isExpanded ? 'card-content expanded' : 'card-content';
-
-      return (
-        <div key={task.id}>
-          <Panel header={task.item} className="tsk-crd">
-            <div className={cardContentClassName}>
-              <p>{`Area: ${task.area}`}</p>
-              <p>{`Task Name: ${task.task_name}`}</p>
-              <p>{`Task Description: ${task.task_descr}`}</p>
-              <p>{`Frequency: ${task.frequency}`}</p>
-              <p>{`Due Date: ${task.due_date}`}</p>
-            </div>
-            <div className="card-links">
-              {task.task_descr.length > 100 && (
-                <button className="expand-button" onClick={() => toggleCardExpansion(task.id)}>
-                  {isExpanded ? 'See less' : 'See more'}
-                </button>
-              )}
-              <div className="card-links">
-                <a href="#">Edit</a>
-                <a href="#">Delete</a>
-              </div>
-            </div>
-          </Panel>
-        </div>
-      );
-    });
-  };
-
   return (
-    <div id="dex">
-      <div className="index-page">
-        <h1>Your Tasks</h1>
-        <div className="tsk-grid">
-          {renderTaskCards()}
-          <Link to="/new">
-            <Panel className="tsk-crd card-add">
-              <div className="card-add">
-                <button className="add-button">Add Task</button>
-              </div>
+    <div style={{ display: 'grid', placeItems: 'center', height: '100vh', overflow: 'auto' }}>
+      <div className='practice-container' style={{ display: 'flex', flexWrap: 'wrap', gap: '3vw', justifyContent: 'center', position: 'relative' }}>
+        {mockTasks.map((task) => (
+          <Link key={task.id} to={`/show/${task.id}`}>
+            <Panel shaded bordered bodyFill style={{ width: '240px', height: '100%' }}>
+              <Panel header={task.task_name}
+                className='practice-card' style={{ border: '1px solid #ccc', padding: '10px' }}>
+                <p className="subTit">{`${task.area} - ${task.item}`}</p>
+              </Panel>
             </Panel>
+          </Link>
+        ))}
+        <div className='btn-container' style={{ position: 'sticky', right: '36vw', top: '10vw' }}>
+          <Link to="/new">
+            <Button style={{ border: '1px solid #ccc' }}>Add Task</Button>
           </Link>
         </div>
       </div>
     </div>
   );
 };
-
 export default IndexPage;
