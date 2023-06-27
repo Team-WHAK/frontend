@@ -169,7 +169,7 @@ Icebox Links code:
                         </ul>
                     </div>
 
-<<<<<<< HEAD
+
             </div> */} 
 
 ## NEW
@@ -342,4 +342,8 @@ Has ...
 <img src='https://i.imgur.com/840884.png' alt='bee' />
 </div>
 </div>
->>>>>>> 1c3b0d47fa4d1c2a1e502a8f7f576360213d7bf3
+
+
+
+## NEED TO MAKE IT SO THAT THE USER NEEDS TO BE LOGGED IN INORDER TO SEE THE HOME PAGE AND OTHER CONTENT ASSOCIATED.
+

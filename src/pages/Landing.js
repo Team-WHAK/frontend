@@ -89,7 +89,7 @@ const Landing = () => {
           <br />
 
           <div className='box3'>
-            <h2> Responsive experiance</h2>
+            <h2> Responsive experience</h2>
             <p>Become a member</p>
             <button>{' > '}</button>
           </div>

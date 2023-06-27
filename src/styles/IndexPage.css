@@ -1,0 +1,53 @@
+#dex{
+  background-color: #eebd43;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+}
+
+.tsk-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.index-page {
+  max-width:60em;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tsk-crd{
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #dc9427;   
+}
+
+.card-content {
+  flex-grow: 1;
+}
+  
+.card-content.expanded {
+  max-height: none;
+}
+
+h1 {
+  text-align: center;
+  padding: 3vw;
+}
+
+.card-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 3vw;
+}
+  
+.add-button{
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
