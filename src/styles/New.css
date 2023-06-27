@@ -1,0 +1,76 @@
+#form {
+  background-color: #eebd43;
+  padding-top: 6vw;
+  padding-bottom: 9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formstyle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6vw;
+  width: 64vw;
+  border: 1px solid black;
+  box-shadow: 2em 5em 5em black;
+  padding: 3vw;
+
+  padding-top: 9vw;
+  padding-bottom: 9vw;
+}
+
+.btnPos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  padding-top: 9vw;
+}
+
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown .rs-dropdown-toggle .rs-dropdown-toggle-value {
+  padding-right: 40px;
+}
+
+.custom-dropdown .rs-dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.custom-dropdown .rs-dropdown-menu .custom-dropdown-item {
+  list-style-type: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: red 0.3s ease;
+}
+
+.custom-dropdown .rs-dropdown-menu .custom-dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+
+.upload-container {
+  position: relative;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 10px;
+  border: 2px dashed #999;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #f5f5f5;
+}
+
+.upload-button input[type="file"] {
+  display: none;
+}

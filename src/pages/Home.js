@@ -20,7 +20,7 @@ const Home = ({currentUser}) => {
         <a href="/users/calendar">
           <Card title="My Calendar"/>
         </a>
-        <a href="/tasks/add">
+        <a href="/new">
           <Card title="Add Task"/>
         </a>
         <a href="/live-agent">
@@ -32,6 +32,3 @@ const Home = ({currentUser}) => {
 };
 
 export default Home;
-
-
-// AFTER SIGNIN
