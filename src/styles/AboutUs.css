@@ -1,0 +1,85 @@
+#bio {
+  background-color: #EEBD43;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+}
+
+.one {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+.two {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+.three {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+.four {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+.img {
+  height: 22vw;
+}
+
+.name {
+  margin-bottom: 16vw;
+  font-family: 'Eczar SemiBold';
+  font-size: 39px;
+}
+
+.parag {
+  width: 23vw;
+  font-family: 'Alegreya';
+  font-size: 27px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.pdc-tit {
+  font-family: 'Eczar SemiBold';
+  font-size: 69px;
+  padding-top: 10vw;
+  color: #992509;
+  margin-right: 22vw;
+}
+
+.pdct {
+  height: 15vw;
+  width: 40vw;
+  font-size: 20px;
+  font-family: 'Alegreya';
+  padding-top: 3vw;
+}
