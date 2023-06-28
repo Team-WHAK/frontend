@@ -1,23 +1,57 @@
 import React, {useState} from 'react';
+// import {Card, CardGroup, CardImg, CardBody, CardTitle, Button, NavLink } from "reactstrap";
 import { Panel, Button } from 'rsuite';
 import { Link } from 'react-router-dom';
 import mockTasks from '../mockTasks';
 
 const IndexPage = ({tasks}) => {
 
-  const [tempTask, setTasks] = useState(tasks);
+  // const [tempTask, setTasks] = useState(tasks);
 
-  const deleteTask = (event, taskId) => {
-    event.preventDefault();
-    const updatedTasks = tempTask.filter((task) => task.id !== taskId);
-    setTasks(updatedTasks);
-    tasks.splice(
-      tasks.findIndex((task) => task.id === taskId),
-      1
-    );
-  };
+  // const deleteTask = (event, taskId) => {
+  //   event.preventDefault();
+  //   const updatedTasks = tempTask.filter((task) => task.id !== taskId);
+  //   setTasks(updatedTasks);
+  //   tasks.splice(
+  //     tasks.findIndex((task) => task.id === taskId),
+  //     1
+  //   );
+  // };
+
+  
   
   return (
+  //   <>
+  //   <CardGroup>
+  //     {tasks?.map((task, index) => {
+  //       return(
+  //         <Card key={index}>
+  //           <CardImg
+  //           alt="the task image"
+  //           src={task.picture}
+  //           top
+  //           width="100%"
+  //           />
+  //           <CardBody>
+  //             <CardTitle tag="h5">
+  //               {task.area}
+  //             </CardTitle>
+  //             <Button>
+  //               <NavLink href={`show/${task.id}`}>
+  //                 More Info
+  //               </NavLink>
+  //             </Button>
+  //             <Button>
+  //               Delete
+  //             </Button>
+  //           </CardBody>
+  //         </Card>
+  //       )
+  //     })}
+  //   </CardGroup>
+  //   </>
+
+
     <div
       style={{
         display: "grid",
@@ -36,36 +70,36 @@ const IndexPage = ({tasks}) => {
           position: "relative",
         }}
       >
-        {tasks.map((task) => (
-          <Link key={task.id} to={`/show/${task.id}`}>
-            <Panel
-              shaded
-              bordered
-              bodyFill
-              style={{ width: "240px", height: "100%" }}
-            >
+        {tasks.map((task) => {
+          return ( <Link key={task.id} to={`/show/${task.id}`}>
               <Panel
-                header={task.task_name}
-                className="practice-card"
-                style={{ border: "1px solid #ccc", padding: "10px" }}
+                shaded
+                bordered
+                bodyFill
+                style={{ width: "240px", height: "100%" }}
               >
-                <p className="subTit">{`${task.area} - ${task.item}`}</p>
-                <Button
-                  onClick={(e) => deleteTask(e, task.id)}
-                  style={{ marginTop: "10px" }}
-                  color="red"
+                <Panel
+                  header={task.task_name}
+                  className="practice-card"
+                  style={{ border: "1px solid #ccc", padding: "10px" }}
                 >
-                  Delete
-                </Button>
-                <Link key={task.id}to={`/edit/${task.id}`}>
-                  <Button style={{ border: "1px solid #ccc" }}>
-                    Edit
+                  <p className="subTit">{`${task.area} - ${task.item}`}</p>
+                  <Button
+                    // onClick={(e) => deleteTask(e, task.id)}
+                    style={{ marginTop: "10px" }}
+                    color="red"
+                  >
+                    Delete
                   </Button>
-                </Link>
+                  <Link key={task.id}to={`/edit/${task.id}`}>
+                    <Button style={{ border: "1px solid #ccc" }}>
+                      Edit
+                    </Button>
+                  </Link>
+                </Panel>
               </Panel>
-            </Panel>
-          </Link>
-        ))}
+            </Link>)
+        })}
         <div
           className="btn-container"
           style={{ position: "sticky", right: "36vw", top: "10vw" }}
@@ -76,7 +110,7 @@ const IndexPage = ({tasks}) => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default IndexPage;

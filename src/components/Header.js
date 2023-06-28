@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Content, Container } from 'rsuite';
 import '../styles/Header.css';
 
-const Header = ({currentUser}) => {
+const Header = ({currentUser, logout}) => {
 
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    logout()
+    navigate('/')
+  }
 
   return (
     <>
@@ -30,7 +37,7 @@ const Header = ({currentUser}) => {
         <Nav className="right">
           {currentUser && (
             <>
-              <Nav.Item>
+              <Nav.Item onClick={handleClick}>
                 <input type="button" value="Log Out" />
               </Nav.Item>
             </>

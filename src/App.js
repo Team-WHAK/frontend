@@ -73,26 +73,26 @@ function App() {
       .catch((errors) => console.log("Task update errors:", errors));
   }
 
-  const deleteTask = (id) => {
-    fetch(`${url}/tasks/${id}`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then((payload) => readTask())
-      .catch((errors) => console.log("Task delete errors:", errors));
-  };
+  // const deleteTask = (id) => {
+  //   fetch(`${url}/tasks/${id}`, {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     method: "DELETE",
+  //   })
+  //     .then((response) => response.json())
+  //     .then((payload) => readTask())
+  //     .catch((errors) => console.log("Task delete errors:", errors));
+  // };
 
   const login = (userInfo) => {
     fetch(`${url}/login`, {
       body: JSON.stringify(userInfo),
       headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
+        "Content-Type": 'application/json',
+        "Accept": 'application/json'
       },
-      method: "POST",
+      method: 'POST',
     })
       .then(response => {
         if(!response.ok) {
@@ -129,21 +129,36 @@ function App() {
       .catch((error) => console.log("login errors: ", error));
   }; 
 
+  const logout = () => {
+    fetch(`${url}/logout`, {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      method: "DELETE",
+    })
+     .then(payload => {
+      localStorage.removeItem("token")
+      setCurrentUser(null)
+     })
+     .catch(error => console.log("log out errors: ", error))
+  };   
+
   return (
     <>
-      <Header currentUser={currentUser} />
+      <Header currentUser={currentUser} logout={logout}/>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/indexpage" element={<IndexPage tasks={tasks}/>} />
+        <Route path="/signup" element={<SignUp signup={signup}/>} />
+        <Route path="/login" element={<LogIn login={login}/>} />
+        <Route path="/indexpage" element={<IndexPage tasks={tasks} currentUser={currentUser}/>} />
         <Route path="/show/" element={<Show tasks={tasks} />} />
         <Route
           path="/edit/:id"
-          element={<Edit tasks={tasks} currentUser={currentUser} />}
+          element={<Edit tasks={tasks} currentUser={currentUser} updateTask={updateTask}/>}
         />
-        <Route path="/new" element={<New />} />
+        <Route path="/new" element={<New createTask={createTask} currentUser={currentUser}/>} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import mockUsers from "../mockUsers";
 import '../styles/SignUp.css';
 
-const SignUp = () => {
+const SignUp = ({signup}) => {
   const formRef = useRef();
   const navigate = useNavigate();
 
@@ -11,12 +11,11 @@ const SignUp = () => {
     e.preventDefault();
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
-    const newUser = {
-      id: mockUsers.length + 1,
-      email: data.email,
+    const userInfo = {
+      user: {email: data.email, password: data.password},
     };
 
-    mockUsers.push(newUser); 
+    signup(userInfo)
 
     navigate("/:id");
     e.target.reset();

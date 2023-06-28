@@ -17,34 +17,22 @@ const New = ({ createTask, currentUser }) => {
     user_id: currentUser?.id
   });
 
-  const [tasks, setTasks] = useState(mockTasks);
+  // const [tasks, setTasks] = useState(mockTasks);
 
+   const handleChange = (e) => {
+     setNewTask({ ...newTask, [e.target.name]: e.target.value});
+   };
+  
   const navigate = useNavigate();
 
   const [error, setError] = useState(false);
 
-  const handleChange = (value, name) => {
-    setNewTask({ ...newTask, [name]: value });
-    console.log(name, value); 
-  };
 
-  const handleSubmit = () => {
-    if (
-      newTask.area !== "" &&
-      newTask.item !== "" &&
-      newTask.image !== "" &&
-      newTask.task !== "" &&
-      newTask.description !== "" &&
-      newTask.frequency !== "" &&
-      newTask.due_date !== ""
-    ) {
-      const updatedTasks = [...tasks, newTask]; // Add the new task to the existing tasks
-      setTasks(updatedTasks); // Update the tasks state with the updated tasks array
-      navigate("/index");
-    } else {
-      setError(true);
-      Message.error("Please fill out all required fields.");
-    }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    createTask(newTask)
+    navigate('/indexpage')
   };
 
   const handleCancel = () => {
@@ -79,7 +67,7 @@ const New = ({ createTask, currentUser }) => {
           <Form.ControlLabel>Area</Form.ControlLabel>
           <Input
             name="area"
-            onChange={value => handleChange(value, 'area')}
+            onChange={handleChange}
             value={newTask.area}
             style={{ width: '18em' }}
           />
@@ -89,7 +77,7 @@ const New = ({ createTask, currentUser }) => {
           <Form.ControlLabel>Item</Form.ControlLabel>
           <Input
             name="item"
-            onChange={value => handleChange(value, 'item')}
+            onChange={handleChange}
             value={newTask.item}
             style={{ width: '18em' }}
           />
@@ -128,7 +116,7 @@ const New = ({ createTask, currentUser }) => {
           <Form.ControlLabel>Task</Form.ControlLabel>
           <Input
             name="task"
-            onChange={value => handleChange(value, 'task')}
+            onChange={handleChange}
             value={newTask.task}
             style={{ width: '18em' }}
           />
@@ -138,7 +126,7 @@ const New = ({ createTask, currentUser }) => {
           <Form.ControlLabel>Due Date</Form.ControlLabel>
           <DatePicker
             name="due_date"
-            onChange={value => handleChange(value, 'due_date')}
+            onChange={handleChange}
             value={newTask.due_date ? new Date(newTask.due_date) : null}
             style={{ width: '18em' }}
           />
@@ -163,7 +151,7 @@ const New = ({ createTask, currentUser }) => {
           <Form.ControlLabel>Description</Form.ControlLabel>
           <Input
             name="description"
-            onChange={value => handleChange(value, 'description')}
+            onChange={handleChange}
             value={newTask.description}
             style={{ width: '18em', height: '6em' }}
           />
