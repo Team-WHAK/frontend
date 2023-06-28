@@ -1,11 +1,19 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import ContactForm from '../pages/ContactForm';
 
-
 describe('ContactForm', () => {
+  
+    beforeEach(() => {
+      render(
+        <BrowserRouter>
+          <ContactForm />
+        </BrowserRouter>
+      );
+    });
+
   it('should prevent form submission', () => {
-    render(<ContactForm />);
 
     const submitButton = screen.getByText('Submit');
     const handleSubmit = jest.fn();
@@ -13,8 +21,6 @@ describe('ContactForm', () => {
     fireEvent.submit(submitButton);
 
     expect(handleSubmit).not.toHaveBeenCalled();
-
-    screen.debug();
   });
   
 });
