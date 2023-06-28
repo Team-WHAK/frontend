@@ -28,6 +28,8 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
     navigate(`/taskshow/${currentTask?.id}`)
   }
 
+  console.log("current task: " + {tasks});
+
   return (
     <div
       style={{
@@ -36,6 +38,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
         backgroundRepeat: "no-repeat"
       }}
     >
+      <h1>{currentTask.task_name}</h1>
       <Form>
         <Row>
           <Col md={6}>

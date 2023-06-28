@@ -29,7 +29,7 @@ const Show = ({ tasks }) => {
               <p className="task-item">{task.item}</p>
               <p className="description">{task.task_descr}</p>
               <div className="button-container">
-                <Link to="/index">
+                <Link to="/indexpage">
                   <Button className="return-button">Return</Button>
                 </Link>
               </div>
