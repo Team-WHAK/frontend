@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Panel, Button } from 'rsuite';
 import { Link } from 'react-router-dom';
 import mockTasks from '../mockTasks';
+
 const IndexPage = () => {
   const [tasks, setTasks] = useState(mockTasks);
   const deleteTask = (event, taskId) => {
@@ -13,6 +14,7 @@ const IndexPage = () => {
       1
     );
   };
+  
   return (
     <div style={{ display: 'grid', placeItems: 'center', height: '100vh', overflow: 'auto' }}>
       <div className='practice-container' style={{ display: 'flex', flexWrap: 'wrap', gap: '3vw', justifyContent: 'center', position: 'relative' }}>
@@ -38,4 +40,5 @@ const IndexPage = () => {
     </div>
   );
 };
+
 export default IndexPage;
