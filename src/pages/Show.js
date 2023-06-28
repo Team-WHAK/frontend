@@ -5,6 +5,11 @@ import '../styles/Show.css';
 
 const Show = ({ tasks }) => {
   const { id } = useParams();
+
+  // iterates through the 'tasks' array provided by the props
+  // compares id property of each item in 'tasks' to useParams id above
+  // Number(id) converts id into a number for comparison
+  // returns the task object if located
   const task = tasks.find((item) => item.id === Number(id));
 
   return (
