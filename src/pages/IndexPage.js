@@ -4,7 +4,7 @@ import { Panel, Button } from 'rsuite';
 import { Link } from 'react-router-dom';
 import mockTasks from '../mockTasks';
 
-const IndexPage = ({tasks}) => {
+const IndexPage = ({tasks, currentUser}) => {
 
   // const [tempTask, setTasks] = useState(tasks);
 
@@ -18,6 +18,7 @@ const IndexPage = ({tasks}) => {
   //   );
   // };
 
+  const myTasks = tasks?.filter(task => currentUser?.id === task.user_id)
   
   
   return (
