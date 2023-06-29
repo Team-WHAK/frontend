@@ -3,14 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import { Panel, Button } from 'rsuite';
 import '../styles/Show.css';
 
-const Show = ({ tasks }) => {
+const Show = ({ tasks, currentUser }) => {
+  
   const { id } = useParams();
 
-  // iterates through the 'tasks' array provided by the props
-  // compares id property of each item in 'tasks' to useParams id above
-  // Number(id) converts id into a number for comparison
-  // returns the task object if located
-  const task = tasks.find((item) => item.id === Number(id));
+  const task = tasks?.find((item) => item.id === +id);
 
   return (
     <div id="page">
@@ -29,7 +26,7 @@ const Show = ({ tasks }) => {
               <p className="task-item">{task.item}</p>
               <p className="description">{task.task_descr}</p>
               <div className="button-container">
-                <Link to="/index">
+                <Link to="/indexpage">
                   <Button className="return-button">Return</Button>
                 </Link>
               </div>
@@ -42,4 +39,5 @@ const Show = ({ tasks }) => {
     </div>
   );
 };
+
 export default Show;
