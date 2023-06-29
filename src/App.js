@@ -24,7 +24,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [tasks, setTasks] = useState([])
 
-  const url = "http://localhost:3000"
+  const url = "https://honeyhome.onrender.com "
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("token")
