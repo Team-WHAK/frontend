@@ -17,9 +17,6 @@ import SignUp from "./pages/SignUp"
 import Landing from './pages/Landing'
 import ContactForm from './pages/ContactForm'
 import AboutUs from './pages/AboutUs'
-// mock data files
-import mockTasks from "./mockTasks"
-import mockUsers from "./mockUsers"
 
 
 function App() {
@@ -137,11 +134,11 @@ function App() {
       },
       method: "DELETE",
     })
-     .then(payload => {
-      localStorage.removeItem("token")
-      setCurrentUser(null)
-     })
-     .catch(error => console.log("log out errors: ", error))
+      .then(payload => {
+        localStorage.removeItem("token")
+        setCurrentUser(null)
+      })
+      .catch(error => console.log("log out errors: ", error))
   };   
 
   return (
@@ -154,10 +151,7 @@ function App() {
         <Route path="/login" element={<LogIn login={login}/>} />
         <Route path="/indexpage" element={<IndexPage tasks={tasks} currentUser={currentUser} deleteTask={deleteTask}/>} />
         <Route path="/show/:id" element={<Show tasks={tasks} />} />
-        <Route
-          path="/edit/:id"
-          element={<Edit tasks={tasks} currentUser={currentUser} updateTask={updateTask}/>}
-        />
+        <Route path="/edit/:id" element={<Edit tasks={tasks} currentUser={currentUser} updateTask={updateTask}/>} />
         <Route path="/new" element={<New createTask={createTask} currentUser={currentUser}/>} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/aboutus" element={<AboutUs />} />

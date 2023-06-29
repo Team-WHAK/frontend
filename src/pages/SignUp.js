@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import mockUsers from "../mockUsers";
 import '../styles/SignUp.css';
 
 const SignUp = ({signup}) => {
+
   const formRef = useRef();
   const navigate = useNavigate();
 
@@ -16,7 +16,6 @@ const SignUp = ({signup}) => {
     };
 
     signup(userInfo)
-
     navigate("/home");
     e.target.reset();
   };

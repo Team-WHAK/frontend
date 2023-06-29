@@ -1,6 +1,5 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import mockUsers from "../mockUsers";
 import '../styles/LogIn.css';
 
 const LogIn = ({ login }) => {

@@ -1,10 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Panel, Button } from 'rsuite';
 import { Link } from 'react-router-dom';
 
 const IndexPage = ({tasks, currentUser, deleteTask}) => {
-
-  // const [tempTask, setTasks] = useState(tasks);
 
   const handleDeleteTask = (taskId) => {
     deleteTask(taskId)
@@ -12,9 +10,7 @@ const IndexPage = ({tasks, currentUser, deleteTask}) => {
 
   const myTasks = tasks?.filter(task => currentUser?.id === task.user_id)
   
-  
   return (
-
     <div
       style={{
         display: "grid",

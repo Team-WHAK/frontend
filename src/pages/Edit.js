@@ -28,8 +28,6 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
     navigate(`/show/${currentTask?.id}`)
   }
 
-  console.log("current task: " + {tasks});
-
   return (
     <div
       style={{

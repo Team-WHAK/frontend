@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { Form, Input, Button, DatePicker, Message, Dropdown, Label} from 'rsuite';
-// import {Form, Row, Col, FormGroup, Label, Input, Button} from 'reactstrap'
+import { Form, Input, Button, Message, Dropdown } from 'rsuite';
 import { useNavigate } from 'react-router-dom';
-import mockTasks from '../mockTasks';
-
 import '../styles/New.css';
 
 const New = ({ createTask, currentUser }) => {
@@ -129,9 +126,7 @@ const New = ({ createTask, currentUser }) => {
             <CustomDropdownItem eventKey="Daily">Daily</CustomDropdownItem>
             <CustomDropdownItem eventKey="Weekly">Weekly</CustomDropdownItem>
             <CustomDropdownItem eventKey="Monthly">Monthly</CustomDropdownItem>
-            <CustomDropdownItem eventKey="Annually">
-              Annually
-            </CustomDropdownItem>
+            <CustomDropdownItem eventKey="Annually">Annually</CustomDropdownItem>
           </Dropdown>
           value={newTask.due_date}
         </Form.Group>
@@ -171,7 +166,8 @@ const New = ({ createTask, currentUser }) => {
           className="text-center mx-auto my-2"
           style={{ width: "50vw" }}
         >
-          Error! <br />
+          Error! 
+          <br />
           Please make sure you are logged in and fill out all required fields
         </Message>
       )}

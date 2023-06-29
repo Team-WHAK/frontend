@@ -4,6 +4,7 @@ import { Panel, Button } from 'rsuite';
 import '../styles/Show.css';
 
 const Show = ({ tasks, currentUser }) => {
+  
   const { id } = useParams();
 
   const task = tasks?.find((item) => item.id === +id);
@@ -38,4 +39,5 @@ const Show = ({ tasks, currentUser }) => {
     </div>
   );
 };
+
 export default Show;
