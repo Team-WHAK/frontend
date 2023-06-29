@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"
-import { Form, Row, Col, FormGroup, Label, Input, Button } from "reactstrap"
+import { Form, Row, Col, FormGroup, Label, Input, Button, NavLink } from "reactstrap"
 
 const Edit = ({ tasks, updateTask, currentUser }) => {
   const { id } = useParams()
@@ -35,7 +35,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
       style={{
         backgroundImage: "url(back.png)",
         backgroundSize: "cover",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
       }}
     >
       <h1>{currentTask.task_name}</h1>
@@ -43,9 +43,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
         <Row>
           <Col md={6}>
             <FormGroup>
-              <Label for="area">
-                Area:
-              </Label>
+              <Label for="area">Area:</Label>
               <Input
                 id="area"
                 name="area"
@@ -58,9 +56,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
           </Col>
           <Col md={6}>
             <FormGroup>
-              <Label for="item">
-                Item:
-              </Label>
+              <Label for="item">Item:</Label>
               <Input
                 id="item"
                 name="item"
@@ -75,9 +71,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
         <Row>
           <Col md={6}>
             <FormGroup>
-              <Label for="task_name">
-                Task Name:
-              </Label>
+              <Label for="task_name">Task Name:</Label>
               <Input
                 id="task_name"
                 name="task_name"
@@ -90,9 +84,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
           </Col>
           <Col md={6}>
             <FormGroup>
-              <Label for="task_descr">
-                Task Description:
-              </Label>
+              <Label for="task_descr">Task Description:</Label>
               <Input
                 id="task_descr"
                 name="task_descr"
@@ -107,9 +99,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
         <Row>
           <Col md={6}>
             <FormGroup>
-              <Label for="picture">
-                Picture:
-              </Label>
+              <Label for="picture">Picture:</Label>
               <Input
                 id="picture"
                 name="picture"
@@ -122,9 +112,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
           </Col>
           <Col md={6}>
             <FormGroup>
-              <Label for="frequency">
-                Frequency:
-              </Label>
+              <Label for="frequency">Frequency:</Label>
               <Input
                 id="frequency"
                 name="frequency"
@@ -139,9 +127,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
         <Row>
           <Col md={3}>
             <FormGroup>
-              <Label for="due_date">
-                Due Date:
-              </Label>
+              <Label for="due_date">Due Date:</Label>
               <Input
                 id="due_date"
                 name="due_date"
@@ -162,16 +148,18 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
             id="user_id"
             name="user_id"
             onChange={handleChange}
-            value={editTask.user_id = currentUser?.id}
+            value={(editTask.user_id = currentUser?.id)}
             type="hidden"
           />
         </FormGroup>
-        <Button onClick={handleSubmit} name="submit">
-          Submit Updated Task
-        </Button>
+        <NavLink href={`/edit/${tasks.id}`}>
+          <Button onClick={handleSubmit} name="submit">
+            Submit Updated Task
+          </Button>
+        </NavLink>
       </Form>
     </div>
-  )
+  );
 }
 
 export default Edit;

@@ -2,19 +2,13 @@ import React, {useState} from 'react';
 import { Panel, Button } from 'rsuite';
 import { Link } from 'react-router-dom';
 
-const IndexPage = ({tasks, currentUser}) => {
+const IndexPage = ({tasks, currentUser, deleteTask}) => {
 
   // const [tempTask, setTasks] = useState(tasks);
 
-  // const deleteTask = (event, taskId) => {
-  //   event.preventDefault();
-  //   const updatedTasks = tempTask.filter((task) => task.id !== taskId);
-  //   setTasks(updatedTasks);
-  //   tasks.splice(
-  //     tasks.findIndex((task) => task.id === taskId),
-  //     1
-  //   );
-  // };
+  const handleDeleteTask = (taskId) => {
+    deleteTask(taskId)
+  }
 
   const myTasks = tasks?.filter(task => currentUser?.id === task.user_id)
   
@@ -40,7 +34,8 @@ const IndexPage = ({tasks, currentUser}) => {
         }}
       >
         {myTasks?.map((task) => {
-          return ( <Link key={task.id} to={`/show/${task.id}`}>
+          return (
+            <Link key={task.id} to={`/show/${task.id}`}>
               <Panel
                 shaded
                 bordered
@@ -53,21 +48,22 @@ const IndexPage = ({tasks, currentUser}) => {
                   style={{ border: "1px solid #ccc", padding: "10px" }}
                 >
                   <p className="subTit">{`${task.area} - ${task.item}`}</p>
-                  <Button
-                    // onClick={(e) => deleteTask(e, task.id)}
-                    style={{ marginTop: "10px" }}
-                    color="red"
-                  >
-                    Delete
-                  </Button>
-                  <Link key={task.id}to={`/edit/${task.id}`}>
-                    <Button style={{ border: "1px solid #ccc" }}>
-                      Edit
+                  <Link to="/indexpage">
+                    <Button
+                      onClick={() => handleDeleteTask(task.id)}
+                      style={{ marginTop: "10px" }}
+                      color="red"
+                    >
+                      Delete
                     </Button>
+                  </Link>
+                  <Link key={task.id} to={`/edit/${task.id}`}>
+                    <Button style={{ border: "1px solid #ccc" }}>Edit</Button>
                   </Link>
                 </Panel>
               </Panel>
-            </Link>)
+            </Link>
+          );
         })}
         <div
           className="btn-container"

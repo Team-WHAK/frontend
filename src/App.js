@@ -73,17 +73,17 @@ function App() {
       .catch((errors) => console.log("Task update errors:", errors));
   }
 
-  // const deleteTask = (id) => {
-  //   fetch(`${url}/tasks/${id}`, {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     method: "DELETE",
-  //   })
-  //     .then((response) => response.json())
-  //     .then((payload) => readTask())
-  //     .catch((errors) => console.log("Task delete errors:", errors));
-  // };
+  const deleteTask = (id) => {
+    fetch(`${url}/tasks/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((payload) => readTask())
+      .catch((errors) => console.log("Task delete errors:", errors));
+  };
 
   const login = (userInfo) => {
     fetch(`${url}/login`, {
@@ -152,7 +152,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<SignUp signup={signup}/>} />
         <Route path="/login" element={<LogIn login={login}/>} />
-        <Route path="/indexpage" element={<IndexPage tasks={tasks} currentUser={currentUser}/>} />
+        <Route path="/indexpage" element={<IndexPage tasks={tasks} currentUser={currentUser} deleteTask={deleteTask}/>} />
         <Route path="/show/:id" element={<Show tasks={tasks} />} />
         <Route
           path="/edit/:id"
