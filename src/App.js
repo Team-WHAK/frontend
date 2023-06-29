@@ -5,6 +5,7 @@ import "./App.css";
 // component files
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+import Chat from "./components/Chat"
 // page files
 import Edit from "./pages/Edit"
 import Home from "./pages/Home"
@@ -19,12 +20,15 @@ import ContactForm from './pages/ContactForm'
 import AboutUs from './pages/AboutUs'
 
 
+
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null)
   const [tasks, setTasks] = useState([])
 
-  const url = "https://honeyhome.onrender.com "
+  // const url = "https://honeyhome.onrender.com "
+  const url = "https://localhost:3001/"
+
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("token")
@@ -147,6 +151,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/chat" element={<Chat />} />
         <Route path="/signup" element={<SignUp signup={signup}/>} />
         <Route path="/login" element={<LogIn login={login}/>} />
         <Route path="/indexpage" element={<IndexPage tasks={tasks} currentUser={currentUser} deleteTask={deleteTask}/>} />

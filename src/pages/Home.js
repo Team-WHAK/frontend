@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import ReactDOM from 'react-dom';
 import { Panel, Placeholder, Grid, Row, Col } from 'rsuite';
 import '../styles/Home.css';
-import Chat from '../components/Chat.js';
+import Chat from '../components/Chat';
 
 const Card = ({ title }) => (
   <Panel bordered header={title} className="card">
