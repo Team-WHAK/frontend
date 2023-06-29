@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
-// import {Card, CardGroup, CardImg, CardBody, CardTitle, Button, NavLink } from "reactstrap";
 import { Panel, Button } from 'rsuite';
 import { Link } from 'react-router-dom';
-import mockTasks from '../mockTasks';
 
 const IndexPage = ({tasks, currentUser}) => {
 
@@ -22,36 +20,6 @@ const IndexPage = ({tasks, currentUser}) => {
   
   
   return (
-  //   <>
-  //   <CardGroup>
-  //     {tasks?.map((task, index) => {
-  //       return(
-  //         <Card key={index}>
-  //           <CardImg
-  //           alt="the task image"
-  //           src={task.picture}
-  //           top
-  //           width="100%"
-  //           />
-  //           <CardBody>
-  //             <CardTitle tag="h5">
-  //               {task.area}
-  //             </CardTitle>
-  //             <Button>
-  //               <NavLink href={`show/${task.id}`}>
-  //                 More Info
-  //               </NavLink>
-  //             </Button>
-  //             <Button>
-  //               Delete
-  //             </Button>
-  //           </CardBody>
-  //         </Card>
-  //       )
-  //     })}
-  //   </CardGroup>
-  //   </>
-
 
     <div
       style={{

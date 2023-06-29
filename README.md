@@ -347,3 +347,49 @@ Has ...
 
 ## NEED TO MAKE IT SO THAT THE USER NEEDS TO BE LOGGED IN INORDER TO SEE THE HOME PAGE AND OTHER CONTENT ASSOCIATED.
 
+
+## The following code is for the picture uploading feature on the new page. As of right now, I cannot get this to work while also storing to the db.
+
+here is the handleUpload code
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setNewTask({ ...newTask, picture: reader.result });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+Here is the form code
+        {/* <Form.Group>
+          <Form.ControlLabel>Picture</Form.ControlLabel>
+          <div className="upload-container">
+            <label htmlFor="image-upload" className="upload-button">
+              Upload Picture
+              <input
+                id="picture"
+                name="picture"
+                placeholder="Provide a picture of the item"
+                type="text"
+                accept="image/*"
+                onChange={handleImageUpload}
+              />
+            </label>
+          </div>
+          {newTask.picture && (
+            <div style={{ maxWidth: "200px" }}>
+              <img
+                src={newTask.picture}
+                alt="Uploaded"
+                style={{
+                  width: "100%",
+                  boxShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
+                  borderRadius: "4px",
+                }}
+              />
+            </div>
+          )}
+        </Form.Group> */}
+

@@ -153,7 +153,7 @@ function App() {
         <Route path="/signup" element={<SignUp signup={signup}/>} />
         <Route path="/login" element={<LogIn login={login}/>} />
         <Route path="/indexpage" element={<IndexPage tasks={tasks} currentUser={currentUser}/>} />
-        <Route path="/show/" element={<Show tasks={tasks} />} />
+        <Route path="/show/:id" element={<Show tasks={tasks} />} />
         <Route
           path="/edit/:id"
           element={<Edit tasks={tasks} currentUser={currentUser} updateTask={updateTask}/>}
