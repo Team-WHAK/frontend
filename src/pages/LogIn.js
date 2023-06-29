@@ -21,7 +21,7 @@ const LogIn = ({ login }) => {
   return (
     <div id="login">
     <div  className="login-container">
-      <h1 className="entr">Sign In</h1>
+      <h1 className="entr">Log In</h1>
         <form ref={formRef} onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email:</label>
