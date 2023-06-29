@@ -17,7 +17,7 @@ const SignUp = ({signup}) => {
 
     signup(userInfo)
 
-    navigate("/:id");
+    navigate("/home");
     e.target.reset();
   };
 

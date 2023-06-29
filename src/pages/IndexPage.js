@@ -71,7 +71,7 @@ const IndexPage = ({tasks, currentUser}) => {
           position: "relative",
         }}
       >
-        {tasks.map((task) => {
+        {myTasks?.map((task) => {
           return ( <Link key={task.id} to={`/show/${task.id}`}>
               <Panel
                 shaded
