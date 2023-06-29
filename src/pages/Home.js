@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import ReactDOM from 'react-dom';
 import { Panel, Placeholder, Grid, Row, Col } from 'rsuite';
 import '../styles/Home.css';
+import Chat from '../components/Chat.js';
 
 const Card = ({ title }) => (
   <Panel bordered header={title} className="card">
@@ -17,14 +18,12 @@ const Home = ({currentUser}) => {
         <a href="/indexpage">
           <Card title="My Tasks"/>
         </a>
-        <a href="/users/calendar">
-          <Card title="My Calendar"/>
-        </a>
         <a href="/new">
           <Card title="Add Task"/>
         </a>
         <a href="/live-agent">
           <Card title="Live Agent"/>
+          <Chat />
         </a>
       </div>
     </div>
