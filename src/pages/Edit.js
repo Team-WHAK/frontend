@@ -25,7 +25,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
 
   const handleSubmit = () => {
     updateTask(editTask, currentTask?.id)
-    navigate(`/taskshow/${currentTask?.id}`)
+    navigate(`/show/${currentTask?.id}`)
   }
 
   console.log("current task: " + {tasks});
@@ -152,11 +152,10 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
             type="hidden"
           />
         </FormGroup>
-        <NavLink href={`/edit/${tasks.id}`}>
+
           <Button onClick={handleSubmit} name="submit">
             Submit Updated Task
           </Button>
-        </NavLink>
       </Form>
     </div>
   );
