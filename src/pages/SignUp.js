@@ -37,7 +37,7 @@ const SignUp = ({signup}) => {
             <label htmlFor="password_confirmation">Confirm Password:</label>
             <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password" />
           </div>
-          <div className="form-group">
+          <div className="form-submit">
             <input type="submit" value="Submit" className="submit-btn" />
           </div>
         </form>

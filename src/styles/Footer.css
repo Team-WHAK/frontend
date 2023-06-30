@@ -1,20 +1,13 @@
 #footer {
   background-color: black;
-  color: white;
   text-align: left;
-  font-size: 30px;
-  padding: 10px;
+  font-size: 50px;
+
 }
 
-#links {
-  background-color: #f4d145;
-  padding-top: 12vw;
-  padding-bottom: 3vw;
-  font-family: 'Alegreya';
-}
 
 #conc {
-  background-color: #f4d145;
+  background-color: #000000;
   padding-top: 12vw;
   padding-bottom: 3vw;
 }
@@ -30,4 +23,7 @@
 
 .soc {
   padding-top: 3vw;
+}
+.TM{
+  margin-left: 90px;
 }
