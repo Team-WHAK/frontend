@@ -1,4 +1,7 @@
 import React from 'react'
+import Aubrey from '../assets/aubrey.jpg'
+import Halie from '../assets/halie.png'
+import Will from "../assets/will.jpg";
 
 import '../styles/AboutUs.css'
 
@@ -22,7 +25,7 @@ const AboutUs = () => {
         </div>
         <div className="two">
           <img
-            src="../assets/aubrey.jpg"
+            src={Aubrey}
             className="img"
             style={{ marginRight: "9vw" }}
           />
@@ -39,7 +42,7 @@ const AboutUs = () => {
       <div className="reverse"></div>
       <div className="three">
         <img
-          src="../assets/will.jpg"
+          src={Will}
           className="img"
           style={{ marginLeft: "9vw" }}
         />
@@ -53,7 +56,7 @@ const AboutUs = () => {
       </div>
       <div className="four">
         <img
-          src="../assets/halie.png"
+          src={Halie}
           className="img"
           style={{ marginRight: "9vw" }}
         />
