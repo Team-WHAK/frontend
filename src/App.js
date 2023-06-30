@@ -1,6 +1,6 @@
 // import
 import React, {useState, useEffect} from "react"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useNavigate } from "react-router-dom"
 import "./App.css";
 // component files
 import Footer from "./components/Footer"
@@ -18,6 +18,7 @@ import SignUp from "./pages/SignUp"
 import Landing from './pages/Landing'
 import ContactForm from './pages/ContactForm'
 import AboutUs from './pages/AboutUs'
+import LogInFail from "./pages/LogInFail";
 
 
 
@@ -25,10 +26,9 @@ function App() {
 
   const [currentUser, setCurrentUser] = useState(null)
   const [tasks, setTasks] = useState([])
+  const navigate = useNavigate()
 
-  // const url = "https://honeyhome.onrender.com "
-  const url = "https://localhost:3001/"
-
+  const url = "https://honeyhome.onrender.com"
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("token")
@@ -97,7 +97,11 @@ function App() {
     })
       .then(response => {
         if(!response.ok) {
+          navigate("/loginfail")
           throw Error(response.statusText)
+        }
+        else {
+          navigate("/home")
         }
         localStorage.setItem("token", response.headers.get("Authorization"))
         return response.json()
@@ -154,6 +158,7 @@ function App() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/signup" element={<SignUp signup={signup}/>} />
         <Route path="/login" element={<LogIn login={login}/>} />
+        <Route path="/loginfail" element={<LogInFail login={login}/>} />
         <Route path="/indexpage" element={<IndexPage tasks={tasks} currentUser={currentUser} deleteTask={deleteTask}/>} />
         <Route path="/show/:id" element={<Show tasks={tasks} />} />
         <Route path="/edit/:id" element={<Edit tasks={tasks} currentUser={currentUser} updateTask={updateTask}/>} />
