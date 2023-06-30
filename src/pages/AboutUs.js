@@ -22,7 +22,7 @@ const AboutUs = () => {
         </div>
         <div className="two">
           <img
-            src="../assets/placer.jpeg"
+            src="../assets/aubrey.jpg"
             className="img"
             style={{ marginRight: "9vw" }}
           />
@@ -39,7 +39,7 @@ const AboutUs = () => {
       <div className="reverse"></div>
       <div className="three">
         <img
-          src="../assets/placer.jpeg"
+          src="../assets/will.jpg"
           className="img"
           style={{ marginLeft: "9vw" }}
         />
@@ -53,7 +53,7 @@ const AboutUs = () => {
       </div>
       <div className="four">
         <img
-          src="../assets/placer.jpeg"
+          src="../assets/halie.png"
           className="img"
           style={{ marginRight: "9vw" }}
         />
