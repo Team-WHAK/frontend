@@ -1,9 +1,11 @@
-import React from 'react'
-import Aubrey from '../assets/aubrey.jpg'
-import Halie from '../assets/halie.png'
+import React from "react";
+import Aubrey from "../assets/aubrey.jpg";
+import Halie from "../assets/halie.png";
 import Will from "../assets/will.jpg";
+import LinkedIn from "../assets/linkedin.png";
+import Github from "../assets/github.png";
 
-import '../styles/AboutUs.css'
+import "../styles/AboutUs.css";
 
 const AboutUs = () => {
   return (
@@ -16,6 +18,22 @@ const AboutUs = () => {
             style={{ marginLeft: "9vw" }}
           />
           <h3 className="name">Kyle</h3>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <img
+              className="rounded"
+              alt="LinkedIn"
+              src={LinkedIn}
+              style={{ width: "40px", height: "auto" }}
+            />
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <img
+              className="rounded"
+              alt="github"
+              src={Github}
+              style={{ width: "40px", height: "auto" }}
+            />
+          </a>
           <p className="parag" style={{ marginRight: "9vw" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -24,12 +42,32 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="two">
-          <img
-            src={Aubrey}
-            className="img"
-            style={{ marginRight: "9vw" }}
-          />
+          <img src={Aubrey} className="img" style={{ marginRight: "9vw" }} />
           <h3 className="name">Aubrey</h3>
+          <a
+            href="https://www.linkedin.com/in/aubrey-diehl/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="rounded"
+              alt="LinkedIn"
+              src={LinkedIn}
+              style={{ width: "40px", height: "auto" }}
+            />
+          </a>
+          <a
+            href="https://github.com/Aubzzz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="rounded"
+              alt="github"
+              src={Github}
+              style={{ width: "40px", height: "auto" }}
+            />
+          </a>
           <p className="parag" style={{ marginLeft: "9vw" }}>
             Aubrey is a navy reservist and outdoor enthusiast who is currently
             residing in San Diego, CA with her partner and two kitties. With a
@@ -41,12 +79,32 @@ const AboutUs = () => {
       </div>
       <div className="reverse"></div>
       <div className="three">
-        <img
-          src={Will}
-          className="img"
-          style={{ marginLeft: "9vw" }}
-        />
+        <img src={Will} className="img" style={{ marginLeft: "9vw" }} />
         <h3 className="name">Will</h3>
+        <a
+          href="https://www.linkedin.com/in/wabowen89/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="rounded"
+            alt="LinkedIn"
+            src={LinkedIn}
+            style={{ width: "40px", height: "auto" }}
+          />
+        </a>
+        <a
+          href="https://github.com/wabowen89"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="rounded"
+            alt="github"
+            src={Github}
+            style={{ width: "40px", height: "auto" }}
+          />
+        </a>
         <p className="parag" style={{ marginRight: "9vw" }}>
           Will is a 12-year veteran of the US Navy and avid coder who lives in
           San Diego, CA. His passion for problem solving has led him to his
@@ -55,12 +113,32 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="four">
-        <img
-          src={Halie}
-          className="img"
-          style={{ marginRight: "9vw" }}
-        />
+        <img src={Halie} className="img" style={{ marginRight: "9vw" }} />
         <h3 className="name">Halie</h3>
+        <a
+          href="https://linkedin.com/in/halie-romasco"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="rounded"
+            alt="LinkedIn"
+            src={LinkedIn}
+            style={{ width: "40px", height: "auto" }}
+          />
+        </a>
+        <a
+          href="https://github.com/haliespaige"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="rounded"
+            alt="github"
+            src={Github}
+            style={{ width: "40px", height: "auto" }}
+          />
+        </a>
         <p className="parag" style={{ marginLeft: "9vw" }}>
           Halie's transition from sales to software development has provided her
           with a unique perspective. She posses strong communication skills, a
@@ -83,5 +161,5 @@ const AboutUs = () => {
       </div>
     </div>
   );
-}
-export default AboutUs
+};
+export default AboutUs;
