@@ -54,20 +54,6 @@ const Header = ({currentUser, logout}) => {
           )}
         </Nav>
       </Navbar>
-      <Container>
-        <Content>
-          <div id="landing">
-            <div className="title-position">
-              <h1 className="title">HoneyHome</h1>
-              <h1 className="title2">Tracker</h1>
-            </div>
-
-            <div className="pic-position">
-              <img src="/images/landing.jpeg" alt="pic" className="pic" />
-            </div>
-          </div>
-        </Content>
-      </Container>
     </>
   );
 };

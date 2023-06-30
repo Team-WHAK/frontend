@@ -5,23 +5,32 @@ import '../styles/Landing.css';
 const Landing = () => {
   return (
     <Container>
+        <Content>
+          <div id="landing">
+            <div className="title-position">
+              <h1 className="title">HoneyHome</h1>
+              <h1 className="title2">Tracker</h1>
+            </div>
+
+            <div className="pic-position">
+              <img src="/images/landing.jpeg" alt="pic" className="pic" />
+            </div>
+          </div>
+        </Content>
       <Content>
-
         <div id="para">
-
           <div className="note-position">
             <h1 className="note">
-              Manage your home products with ease and never miss a maintenance task again!
+              Manage your home products with ease and never miss a maintenance
+              task again!
             </h1>
           </div>
-
         </div>
 
         <br />
         <br />
 
         <div id="key-features">
-
           <Grid fluid>
             <Row>
               <Col md={12} lg={6}>
@@ -34,28 +43,29 @@ const Landing = () => {
 
                   <div className="subtit">
                     <h2>
-                      Securely log in and manage your inventory, scheduling maintenance tasks and tracking their history
-                      for every household item.
+                      Securely log in and manage your inventory, scheduling
+                      maintenance tasks and tracking their history for every
+                      household item.
                     </h2>
 
                     <br />
                     <br />
 
                     <h2>
-                      Receive timely notifications and alerts for expiring warranties and pending maintenance tasks
-                      ensuring you stay on top of your home maintenance.
+                      Receive timely notifications and alerts for expiring
+                      warranties and pending maintenance tasks ensuring you stay
+                      on top of your home maintenance.
                     </h2>
 
                     <br />
                     <br />
 
                     <h2>
-                      Search and filter through your products and tasks quickly with an intuitive and user-friendly
-                      interface that adapts to any device.
+                      Search and filter through your products and tasks quickly
+                      with an intuitive and user-friendly interface that adapts
+                      to any device.
                     </h2>
-
                   </div>
-
                 </Panel>
               </Col>
               <Col md={12} lg={6}>
@@ -65,56 +75,51 @@ const Landing = () => {
               </Col>
             </Row>
           </Grid>
-
         </div>
 
-        <div id='boxes'>
-
-          <div className='box1'>
+        <div id="boxes">
+          <div className="box1">
             <h2> Join the Team</h2>
             <p>Become a member</p>
-            <button className='link-btn'>{' > '}</button>
+            <button className="link-btn">{" > "}</button>
           </div>
 
           <br />
           <br />
 
-          <div className='box2'>
+          <div className="box2">
             <h2> Stay on Task</h2>
             <p>Become a member</p>
-            <button>{' > '}</button>
+            <button>{" > "}</button>
           </div>
 
           <br />
           <br />
 
-          <div className='box3'>
+          <div className="box3">
             <h2> Responsive experience</h2>
             <p>Become a member</p>
-            <button>{' > '}</button>
+            <button>{" > "}</button>
           </div>
-
         </div>
 
-
-        <div id='message'>
-
-          <div className='ready'>
-            <h2>Ready to become a home maintenance master? Maximize your home's value and organization today! </h2>
+        <div id="message">
+          <div className="ready">
+            <h2>
+              Ready to become a home maintenance master? Maximize your home's
+              value and organization today!{" "}
+            </h2>
           </div>
 
-          <div className='btns'>
-            <button className='B1'>Sign Up</button>
-            <button className='B2'>Demo</button>
+          <div className="btns">
+            <button className="B1">Sign Up</button>
+            <button className="B2">Demo</button>
           </div>
-
         </div>
 
-
-        <div id='fam-img'>
-          <img src="/images/family.jpeg" alt='family' className='fam' />
+        <div id="fam-img">
+          <img src="/images/family.jpeg" alt="family" className="fam" />
         </div>
-
       </Content>
     </Container>
   );
