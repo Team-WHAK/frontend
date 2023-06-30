@@ -1,59 +1,100 @@
 #signup {
-  background-color: #eebd43;
+  background-color: #010101;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
+  background-size: cover;
   padding-top: 6vw;
   padding-bottom: 6vw;
 }
 
 .join {
   color: #992509;
-  font-family: 'Eczar SemiBold';
+  font-family:monospace;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  margin-top: -20px;
 }
 
 .signup-container {
-  max-width: 300px;
+  max-width: 1100px;
+  height: 1100px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #dc9427;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 140px;
+  background-color: #f2b02a;
+  background-image: url(' https://www.pngmart.com/files/15/Yellow-Bee-Trail-Path-PNG.png ');
+  background-size: contain;
+  background-repeat: no-repeat;
+  clip-path: polygon(50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%);
 }
 
 .form-group {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 60px;
+  font-family: monospace;
 }
 
 label {
   display: block;
   font-weight: bold;
+  font-size: 25px;
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="passsword_confirmation"] {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  height: 60px;
+
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
 .submit-btn {
-  background-color: black;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
+  background-color: #992509;
+  color: #000000;
+  border: 1px solid #000000;
+
+  border-radius: 15px;
+  width: 600px;
+  height: 60px;
+  font-size: 30px;
   cursor: pointer;
+  margin: 0 auto;
+  font-family: monospace;
 }
 
 .login-link {
-  margin-top: 10px;
+  margin-top: 30px;
   text-align: center;
+  font-size: 23px;
+  font-family: monospace;
 }
 
 .login-link a {
-  color: #0645ad;
+  color: #992509;
   text-decoration: none;
 }
 
 .login-link a:hover {
   text-decoration: underline;
 }
+

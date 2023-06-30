@@ -14,17 +14,17 @@ const Footer = () => {
               <ul style={{ display: 'flex', justifyContent: 'center', gap: '3vw', listStyleType: 'none' }}>
                 <li>
                   <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                    <FaTwitter style={{ color: 'black', fontSize: '24px' }} />
+                    <FaTwitter style={{ color: '#7640a3', fontSize: '120px' }} />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <FaFacebook style={{ color: 'black', fontSize: '24px' }} />
+                    <FaFacebook style={{ color: '#7640a3', fontSize: '120px' }} />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram style={{ color: 'black', fontSize: '24px' }} />
+                    <FaInstagram style={{ color: '#7640a3', fontSize: '120px' }} />
                   </a>
                 </li>
               </ul>
@@ -33,7 +33,7 @@ const Footer = () => {
           <Navbar id='footer'>
 
             <Nav className='TM'>
-              <Nav.Item> © Whak inc. 2023. All rights reserved. </Nav.Item>
+              <Nav.Item style={{textDecoration:'none', color: '#ffffff'}}> © Whak inc. 2023. All rights reserved. </Nav.Item>
             </Nav>
 
           </Navbar>
