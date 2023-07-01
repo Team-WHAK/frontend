@@ -393,3 +393,164 @@ Here is the form code
           )}
         </Form.Group> */}
 
+## Modal For New.js if we decide to use it:
+
+import React, { useState, useEffect } from "react";
+import { Button, Modal, Input, InputGroup, Form, Dropdown, Message } from 'rsuite';
+import { useNavigate } from 'react-router-dom';
+import '../styles/New.css';
+
+const New = ({ createTask, currentUser }) => {
+  const [open, setOpen] = useState(true);
+  const [newTask, setNewTask] = useState({
+    area: "",
+    item: "",
+    picture: "",
+    task_name: "",
+    task_descr: "",
+    frequency: "",
+    due_date: "",
+    user_id: ""
+  });
+
+  const handleInputChange = (value, name) => {
+    setNewTask({ ...newTask, [name]: value });
+  };
+
+  const navigate = useNavigate();
+
+  const [error, setError] = useState(false);
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setNewTask({ ...newTask, image: reader.result });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    createTask(newTask)
+    navigate('/indexpage')
+  };
+
+  useEffect(() => {
+    setOpen(true); // Set showModal to true when component mounts
+  }, []);
+
+  const handleCancel = () => {
+    navigate("/indexpage");
+  };
+
+  const CustomDropdownItem = ({ eventKey, children, ...props }) => (
+    <Dropdown.Item
+      eventKey={eventKey}
+      className="custom-dropdown-item"
+      {...props}
+    >
+      {children}
+    </Dropdown.Item>
+  );
+
+  return (
+    <div id="form">
+      <Modal open={open} >
+        <Modal.Header>
+          <Modal.Title>Add New Task</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form fluid>
+            <Form.Group>
+              <Form.ControlLabel>Area</Form.ControlLabel>
+              <InputGroup>
+                <Input name="area" value={newTask.area} onChange={value => handleInputChange(value, 'area')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Item</Form.ControlLabel>
+              <InputGroup>
+                <Input name="item" value={newTask.item} onChange={value => handleInputChange(value, 'item')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Task Name</Form.ControlLabel>
+              <InputGroup>
+                <Input name="task_name" value={newTask.task_name} onChange={value => handleInputChange(value, 'task_name')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Description</Form.ControlLabel>
+              <InputGroup>
+                <Input name="task_descr" value={newTask.task_descr} onChange={value => handleInputChange(value, 'task_descr')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Frequency</Form.ControlLabel>
+              <InputGroup>
+                <Input name="frequency" value={newTask.frequency} onChange={value => handleInputChange(value, 'frequency')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Due Date</Form.ControlLabel>
+              <InputGroup>
+                <Input name="due_date" value={newTask.due_date} onChange={value => handleInputChange(value, 'due_date')} />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group>
+              <Form.ControlLabel>Image</Form.ControlLabel>
+              <div className="upload-container">
+                <label htmlFor="image-upload" className="upload-button">
+                  Upload Image
+                  <input
+                    id="image-upload"
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageUpload}
+                  />
+                </label>
+              </div>
+              {newTask.image && (
+                <div style={{ maxWidth: '200px' }}>
+                  <img
+                    src={newTask.image}
+                    alt="Uploaded"
+                    style={{
+                      width: '100%',
+                      boxShadow: '0 0 5px rgba(0, 0, 0, 0.2)',
+                      borderRadius: '4px',
+                    }}
+                  />
+                </div>
+              )}
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button appearance="primary" onClick={handleSubmit}>
+            Add Task
+          </Button>
+          <Button appearance="subtle" onClick={handleCancel}>
+            Cancel
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      {error && (
+        <Message
+          color="info"
+          className="text-center mx-auto my-2"
+          style={{ width: "50vw" }}
+        >
+          Error!
+          <br />
+          Please make sure you are logged in and fill out all required fields
+        </Message>
+      )}
+    </div>
+  );
+};
+
+export default New;

@@ -14,7 +14,7 @@ const AboutUs = () => {
         <div className="one">
           <img
             src="../assets/placer.jpeg"
-            className="img"
+            className="about-img"
             style={{ marginLeft: "9vw" }}
           />
           <h3 className="name">Kyle</h3>
