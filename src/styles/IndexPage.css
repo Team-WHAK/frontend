@@ -1,50 +1,107 @@
-#dex{
-  background-color: #eebd43;
-  padding-top: 6vw;
-  padding-bottom: 6vw;
+#index {
+  height: 84vh;
+  width: 100%;
+  background-color: #010101;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
+  background-size: cover;
+  padding-top: 100px;
 }
 
-.tsk-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-.index-page {
-  max-width:60em;
+.index-container {
+  height: 1200px;
+  width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-.tsk-crd{
-  border: 1px solid black;
-  padding: 20px;
-  border-radius: 4px;
-  background-color: #dc9427;   
-}
-
-.card-content {
-  flex-grow: 1;
-}
-  
-.card-content.expanded {
-  max-height: none;
-}
-
-
-
-.card-links{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
-  gap: 3vw;
-}
-  
-.add-button{
-  background: none;
-  border: none;
+  background-color: #f2b02a;
+  background-image: url('https://www.culinaryschools.org/clipart/honey/honeycomb.gif');
+  background-size: cover;
+  font-family: monospace;
+  border-radius: 15px;
+  clip-path: polygon(50% 0%,
+  100% 25%,
+  100% 75%,
+  50% 100%,
+  0% 75%,
+  0% 25%);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: end;
+  margin-right: 500px;
+}
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 400px;
+  
+}
+
+.add {
+  height: 220px;
+  width: 220px;
+  clip-path: polygon(50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%);
+  font-size: 30px;
+  font-family: monospace;
+  background-color: #f2b02a;
+
+}
+
+.crd{
+  background-color: rgba(242, 176, 42, 0.7);
+  height: 400px;
+  width: 400px;
+  clip-path: polygon(50% 0%,
+  100% 25%,
+  100% 75%,
+  50% 100%,
+  0% 75%,
+  0% 25%);
+  font-size: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
+  gap: 50px;
+  color: #000000;
+  font-size: 30px;
+}
+.subTit{
+  color: #000000 !important;
+  font-size: 20px !important;
+}
+
+.index-btns{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width:20px;
+  gap: 20px;
+  padding-top: 30px;
+  margin-left: calc((100% - (1 * 220px) - (1 * 40px)) / 1); 
+}
+
+.btn1{
+  background-color: #992509;
+  border-radius: 15px;
+  font-family: monospace;
+  color: #ffffff;
+  box-shadow: 10px 10px 20px #992509;
+  padding-left: 10px;
+  padding-right: 10px;
 }
