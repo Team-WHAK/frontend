@@ -8,23 +8,22 @@ const Footer = () => {
     <>
       <Container>
         <Content>
-          <div id='conc'>
-            <img src="/images/person.jpeg" alt='person' className='person' />
+          <div id='conc' >
             <div className='soc'>
               <ul style={{ display: 'flex', justifyContent: 'center', gap: '3vw', listStyleType: 'none' }}>
                 <li>
                   <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                    <FaTwitter style={{ color: '#7640a3', fontSize: '120px' }} />
+                    <FaTwitter style={{ color: '#992509', fontSize: '60px' }} />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <FaFacebook style={{ color: '#7640a3', fontSize: '120px' }} />
+                    <FaFacebook style={{ color: '#992509', fontSize: '60px' }} />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram style={{ color: '#7640a3', fontSize: '120px' }} />
+                    <FaInstagram style={{ color: '#992509', fontSize: '60px' }} />
                   </a>
                 </li>
               </ul>

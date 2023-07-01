@@ -22,6 +22,7 @@ const SignUp = ({signup}) => {
 
   return (
     <div id="signup">
+      <div className='shadow'>
       <div  data-testid="signup-component" className="signup-container">
         <h2 className='join'>Sign Up</h2>
         <form ref={formRef} onSubmit={handleSubmit}>
@@ -44,6 +45,7 @@ const SignUp = ({signup}) => {
         <div className="login-link">
           Already registered? <a href="/login">Login</a> here.
         </div>
+      </div>
       </div>
     </div>
   );

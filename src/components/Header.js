@@ -18,19 +18,19 @@ const Header = ({currentUser, logout}) => {
         <Nav className="left">
           <img src="/images/logo.jpeg" alt="Logo" className="logo" />
           {currentUser && (
-            <Nav.Item href="/home" style={{ color: "#ffffff" }}>
+            <Nav.Item href="/home" style={{ color: "#992509", textDecoration:'none' }}>
               Home
             </Nav.Item>
           )}
           {!currentUser && (
-            <Nav.Item href="/" style={{ color: "#ffffff" }}>
+            <Nav.Item href="/" style={{ color: "#992509", textDecoration:'none' }}>
               Home
             </Nav.Item>
           )}
-          <Nav.Item href="/aboutus" style={{ color: "#ffffff" }}>
+          <Nav.Item href="/aboutus" style={{ color: "#992509", textDecoration:'none' }}>
             About Us
           </Nav.Item>
-          <Nav.Item href="/contact" style={{ color: "#ffffff" }}>
+          <Nav.Item href="/contact" style={{ color: "#992509", textDecoration:'none' }}>
             Contact
           </Nav.Item>
         </Nav>
@@ -44,10 +44,10 @@ const Header = ({currentUser, logout}) => {
           )}
           {!currentUser && (
             <>
-              <Nav.Item href="/login" style={{ color: "#ffffff" }}>
+              <Nav.Item href="/login" style={{ color: "#992509", textDecoration:'none' }}>
                 Log In
               </Nav.Item>
-              <Nav.Item href="/signup" style={{ color: "#ffffff" }}>
+              <Nav.Item href="/signup" style={{ color: "#992509", textDecoration:'none' }}>
                 Sign Up
               </Nav.Item>
             </>

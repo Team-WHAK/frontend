@@ -2,28 +2,22 @@
   background-color: black;
   text-align: left;
   font-size: 50px;
-
 }
 
 
 #conc {
-  background-color: #000000;
-  padding-top: 12vw;
-  padding-bottom: 3vw;
+  background-color: #010101;
+  padding-bottom: 0.1px;
+  padding-right: 30px;
 }
 
-.person {
-  height: 18vw;
-  width: 15vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
 
 .soc {
-  padding-top: 3vw;
+  padding-top: 0.5vw;
+  margin-right: 165px;
 }
 .TM{
-  margin-left: 90px;
+  margin-left: 160px;
+  width: 100vw;
+  overflow: hidden !important;
 }
