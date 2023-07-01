@@ -1,4 +1,4 @@
-#container {
+/* #container {
   background-color: #eebd43;
   padding-top: 9vw;
 }
@@ -29,4 +29,21 @@
   margin-bottom: 43%;
   z-index: 1;
   margin-left: 23vw;
+} */
+
+.txt h1 {
+  width: 1800px;
+  font-family:monospace;
+  font-size: 80px ;
+  -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #efd010;
+    text-shadow:
+    0 0 5px #efd010,
+    0 0 10px #efd010,
+    0 0 15px #efd010,
+    0 0 20px #efd010,
+    0 0 25px #efd010,
+    0 0 30px #efd010
+    ;
 }
+

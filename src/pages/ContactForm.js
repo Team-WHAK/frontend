@@ -22,23 +22,30 @@ const ContactForm = () => {
 
   return (
     <div id='contact'>
+<div className='shadow2'>
       <div className="contact-form">
         <h1 className='snd'>Contact Us</h1>
+
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
+
+          <div className="form-group3">
             <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
           </div>
-          <div className="form-group">
+
+          <div className="form-group3">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
           </div>
-          <div className="form-group">
+
+          <div className="form-group3">
             <label htmlFor="message">Message</label>
             <textarea id="msg" name="message" rows="5" value={formData.message} onChange={handleChange} />
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" className='form-submit'>Submit</button>
         </form>
+
+      </div>
       </div>
     </div>
   );

@@ -2,19 +2,20 @@
   background-color: #010101;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
   background-size: cover;
-  padding-top: 6vw;
-  padding-bottom: 6vw;
+  padding-top: 4.9vw;
+  padding-bottom: 4.9vw;
 }
 
 .login-container {
-  max-width: 1100px;
-  height: 1100px;
+  max-width: 1200px;
+  height: 1200px;
   margin: 0 auto;
   padding: 140px;
   background-color: #f2b02a;
   background-image: url(' https://www.pngmart.com/files/15/Yellow-Bee-Trail-Path-PNG.png ');
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: left;
   clip-path: polygon(50% 0%,
       100% 25%,
       100% 75%,
@@ -61,12 +62,11 @@ input[type="password"] {
 
 .form-submit {
   background-color: #992509;
-  color: #000000;
+  color: #ffffff;
   border: 1px solid #000000;
-
   border-radius: 15px;
   width: 600px;
-  height: 60px;
+  height: 90px;
   font-size: 30px;
   cursor: pointer;
   margin: 0 auto;
@@ -87,5 +87,9 @@ color: #992509;
 
 .login-link2 a:hover {
   text-decoration: underline;
+}
+
+.shadow2{
+  filter: drop-shadow(18px 18px 18px rgba(255, 255, 255, 0.5));
 }
 
