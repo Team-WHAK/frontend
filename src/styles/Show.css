@@ -2,31 +2,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #F0F2F5;
-}
+    height: 84vh;
+    width: 100%;
+    background-color: black;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
+    background-size: cover;
+  }
 
 .practice-container {
-    width: 100%;
-    height: 80vh;
-    max-width: 600px;
-    /* Adjust the maximum width as per your preference */
+    width: 1200px;
+    height: 1200px;
     padding: 20px;
-    background-color: #FFFFFF;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f2b02a;
+    background-image: url('https://www.culinaryschools.org/clipart/honey/honeycomb.gif');
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    clip-path: polygon(50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%);
 }
 
 .img {
-    width: 240px;
-    height: 240px;
+    width: 540px !important;
+    height: 340px !important;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    background-color: beige;
+    margin-left: -145px;
+    border-radius: 15px;
 }
 
 .content-panel {
@@ -34,29 +43,30 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
-    /* Adjust the horizontal padding as per your preference */
-}
-
-.subTit {
-    font-size: 18px;
-    color: #888888;
-    margin-bottom: 10px;
+    width: 700px;
+    padding:  20px;
+    font-family: monospace;
+    font-size: 30px;
+    background-color: rgba(242, 176, 42, 0.7);
+    color: #000000;
+    margin-left:-230px;
+    border-radius: 15px;
 }
 
 .description {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.4;
     margin-bottom: 20px;
     text-align: left;
+    color: #000000;
 }
 
 .return-button {
     width: 100%;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    background-color: #992509;
+    color: white;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 25px;
 }

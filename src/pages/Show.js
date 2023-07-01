@@ -2,15 +2,17 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Panel, Button } from 'rsuite';
 import '../styles/Show.css';
+import mockTasks from '../mockTasks'; //delete this after styling is done, also change mockTasks to tasks on line 11
 
 const Show = ({ tasks, currentUser }) => {
   
   const { id } = useParams();
 
-  const task = tasks?.find((item) => item.id === +id);
+  const task = mockTasks?.find((item) => item.id === +id);
 
   return (
     <div id="page">
+      <div className='shadow'>
       {task ? (
         <div className="practice-container">
           <Panel
@@ -36,6 +38,7 @@ const Show = ({ tasks, currentUser }) => {
       ) : (
         <p>No task found</p>
       )}
+      </div>
     </div>
   );
 };

@@ -16,12 +16,12 @@
   background-size: cover;
   font-family: monospace;
   border-radius: 15px;
-  clip-path: polygon(50% 0%,
+  /* clip-path: polygon(50% 0%,
   100% 25%,
   100% 75%,
   50% 100%,
   0% 75%,
-  0% 25%);
+  0% 25%); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
 .btn-container {
   display: flex;
   justify-content: end;
-  margin-right: 500px;
+  margin-right: 713px;
 }
 .task-grid {
   display: grid;
@@ -58,8 +58,8 @@
 
 .crd{
   background-color: rgba(242, 176, 42, 0.7);
-  height: 400px;
-  width: 400px;
+  height: 450px;
+  width: 450px;
   clip-path: polygon(50% 0%,
   100% 25%,
   100% 75%,
@@ -67,19 +67,17 @@
   0% 75%,
   0% 25%);
   font-size: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding-left: 85px;
 }
 
 .card-content{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-top: 90px;
   gap: 50px;
   color: #000000;
   font-size: 30px;
+ 
 }
 .subTit{
   color: #000000 !important;
@@ -93,7 +91,6 @@
   width:20px;
   gap: 20px;
   padding-top: 30px;
-  margin-left: calc((100% - (1 * 220px) - (1 * 40px)) / 1); 
 }
 
 .btn1{
