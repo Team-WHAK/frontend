@@ -21,7 +21,8 @@ const LogIn = ({ login }) => {
   return (
     <div id="login">
       <div className='shadow2'>
-        <div className="login-container">
+        <div className="login-container  animate__animated 
+                    animate__fadeInUp animate__slower	3s">
           <h1 className="entr">Log In</h1>
           <form ref={formRef} onSubmit={handleSubmit}>
             <div className="form-group2">

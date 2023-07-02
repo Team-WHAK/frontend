@@ -23,7 +23,8 @@ const SignUp = ({signup}) => {
   return (
     <div id="signup">
       <div className='shadow'>
-      <div  data-testid="signup-component" className="signup-container">
+      <div  data-testid="signup-component" className="signup-container  animate__animated 
+                    animate__fadeInUp animate__slower	3s">
         <h2 className='join'>Sign Up</h2>
         <form ref={formRef} onSubmit={handleSubmit}>
           <div className="form-group">

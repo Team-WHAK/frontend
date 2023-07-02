@@ -23,7 +23,8 @@ const ContactForm = () => {
   return (
     <div id='contact'>
 <div className='shadow2'>
-      <div className="contact-form">
+      <div className="contact-form animate__animated 
+                    animate__fadeInUp animate__slower	3s">
         <h1 className='snd'>Contact Us</h1>
 
         <form onSubmit={handleSubmit}>

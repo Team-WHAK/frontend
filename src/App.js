@@ -155,7 +155,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/chat" element={<Chat />} />
         <Route path="/signup" element={<SignUp signup={signup}/>} />
         <Route path="/login" element={<LogIn login={login}/>} />
         <Route path="/loginfail" element={<LogInFail login={login}/>} />
