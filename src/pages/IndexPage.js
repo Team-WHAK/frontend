@@ -1,5 +1,5 @@
 import React from 'react';
-import { Panel, Button, Carousel } from 'rsuite';
+import { Panel, Button, } from 'rsuite';
 import { Link } from 'react-router-dom';
 import '../styles/IndexPage.css';
 import mockTasks from '../mockTasks'; //delete this after styling is done, also chang mockTasks to myTasks on line 20
@@ -11,13 +11,18 @@ const IndexPage = ({ tasks, currentUser, deleteTask }) => {
   }
 
   const myTasks = tasks?.filter(task => currentUser?.id === task.user_id)
-  const itemsPerSlide = 6;
+  const itemsPerSlide = 4;
+
+  const taskGroups = [];
+  for(let i = 0; i < myTasks.length; i += itemsPerSlide) {
+    taskGroups.push(myTasks.slice(i, i + itemsPerSlide));
+  }
 
   return (
     <div id="index">
       <div className='shadow'>
         <div
-          className="index-container">
+          className="index-container animate__animated animate__zoomIn animate__slower	2s">
           <div className='task-grid'>
             {mockTasks?.map((task) => {
               return (
@@ -40,7 +45,7 @@ const IndexPage = ({ tasks, currentUser, deleteTask }) => {
                         </Link>
                         <Link key={task.id} to={`/edit/${task.id}`}>
                           <Button
-                            className='btn1'
+                            className='btn1 '
                           >Edit</Button>
                         </Link>
                       </div>
@@ -54,7 +59,7 @@ const IndexPage = ({ tasks, currentUser, deleteTask }) => {
         <div
           className="btn-container" >
           <Link to="/new">
-            <Button style={{ border: "1px solid #000000" }} className='add'> Add Task</Button>
+            <Button style={{ border: "1px solid #000000" }} className='add animate__animated animate__zoomIn animate__slower	3s'> Add Task</Button>
           </Link>
         </div>
       </div>

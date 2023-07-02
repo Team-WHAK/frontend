@@ -59,7 +59,7 @@ const New = ({ createTask, currentUser }) => {
   return (
     <div id="form">
       <div className='shadow'>
-        <Form className="formstyle">
+        <Form className="formstyle animate__animated animate__fadeInLeft animate__slower	3s">
           <Form.Group className='form-layout'>
             <Form.ControlLabel for="area">Area</Form.ControlLabel>
             <Input
@@ -176,7 +176,7 @@ const New = ({ createTask, currentUser }) => {
         {error && (
           <Message
             color="info"
-            className="text-center mx-auto my-2"
+            className="text-center mx-auto my-2 "
             style={{ width: "50vw" }}
           >
             Error!
@@ -185,7 +185,7 @@ const New = ({ createTask, currentUser }) => {
           </Message>
         )}
       </div>
-      <div className="input-card">
+      <div className="input-card animate__animated animate__fadeInRight animate__slower	3s">
         <InputCard newTask={newTask} />
       </div>
 
