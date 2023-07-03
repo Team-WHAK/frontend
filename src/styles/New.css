@@ -7,19 +7,24 @@
   padding-right: 15vw;
   display: flex;
   justify-content: space-between;
-  height: 1580px;
+  height: 84vh;
 }
 .formstyle {
-  width: 1200px;
-  height: 1400px;
+  width: 600px;
+  height: 700px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
   background-color: #f2b02a;
   background-image: url(
     'https://static.vecteezy.com/system/resources/previews/009/384/181/original/bee-tree-hive-clipart-design-illustration-free-png.png'
     );
+    background-size: cover;
   font-family: monospace;
   border-radius: 15px;
   /* clip-path: polygon(50% 0%,
@@ -33,32 +38,31 @@
 
 .formstyle .rs-input{
   width: 100%;
-  height:80px;
-  font-size: 31px;
+  height:40px;
+  font-size: 15px;
 }
 
 
 .btnPos {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px; 
-  margin-left: 20px;
+  margin-top: 10px; 
+  margin-left: 10px;
 }
 
 .btnPos button {
-  padding: 12px 24px;
-  font-size: 18px; 
+  padding: 6px 12px;
+  font-size: 15px; 
   border-radius: 15px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   font-family: monospace;
-font-size: 30px;
 }
 
 .custom-dropdown {
   position: absolute;
-  font-size: 30px;
+  font-size: 15px;
   font-family: monospace;
 }
 
@@ -69,74 +73,53 @@ font-size: 30px;
 .custom-dropdown .rs-dropdown-menu {
   overflow-y: auto;
   z-index: 2 !important;
+  background-color: rgba(242, 176, 42, 0.7);
 }
 
 .custom-dropdown .rs-dropdown-menu .custom-dropdown-item {
   list-style-type: none;
   padding: 8px 16px;
   cursor: pointer;
-  transition: red 0.3s ease;
 }
 
 .custom-dropdown .rs-dropdown-menu .custom-dropdown-item:hover {
-  background-color: #f5f5f5;
-}
-
-
-.upload-container {
-  position: relative;
-}
-
-.upload-button {
-  display: inline-block;
-  padding: 10px;
-  border: 2px dashed #999;
-  border-radius: 4px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.upload-button:hover {
-  background-color: #f5f5f5;
-}
-
-.upload-button input[type="file"] {
-  display: none;
+  background-color: #992509;
+  color: #ffffff;
 }
 
 .input-card {
-  font-size: 46px;
+  font-size: 23px;
   overflow: hidden !important;
-  width: 1200px;
-  height: 1400px;
+  width: 600px;
+  height: 700px;
   display: flex;
+  padding-left: 35px;
+  padding-right: 35px;
   flex-direction: column;
   align-items: center;
   background-color: #f2b02a;
   border-radius: 15px;
-  gap: 90px;
+  gap: 45px;
   background-color: #f2b02a;
   background-image: url('https://static.vecteezy.com/system/resources/previews/009/384/181/original/bee-tree-hive-clipart-design-illustration-free-png.png');
+  background-size: cover;
   font-family: monospace;
   border-radius: 15px;
-  filter: drop-shadow(18px 18px 18px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(9px 9px 9px rgba(255, 255, 255, 0.5));
 }
 
 .input-card-image-container {
   flex: 0.5;
-  max-width: 800px;
-  max-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 120px; 
+  margin-top: 60px; 
   position: absolute;
 }
 
 .input-card-image {
-  max-width: 100%;
-  max-height: 100%;
+height: 200px;
+width: 200px;
   border-radius: 15px;
 }
 
@@ -146,21 +129,21 @@ font-size: 30px;
   align-items: left;
   width: 100%;
   max-width: 1000px;
-  gap: 60px;
+  gap:30px;
   background-color: rgba(242, 176, 42, 0.7);
   border-radius: 15px;
-  margin-top: 600px; 
+  margin-top: 300px; 
 }
 
 .input-card-column {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .input-card-field {
   width: 100%;
-  height: 110px;
+  height: 55px;
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
