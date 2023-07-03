@@ -2,8 +2,8 @@
   background-color: black;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
   background-size: cover;
-  padding-top: 5.4vw;
-  padding-bottom: 5.4vw;
+  padding-top: 4.69vw;
+  padding-bottom: 4.69vw;
 }
 .contact-form {
   height: 600px;
@@ -52,19 +52,16 @@ input,
 textarea {
   width: 100%;
   padding: 4px;
-  border: 1px solid #000000;
   border-radius: 15px;
-  height: 30px;
+  height: 60px;
   font-size: 140px;
 }
 
 button[type='submit'] {
   background-color: #992509;
-  color: #ffffff;
   border: 1px solid #000000;
   border-radius: 15px;
   width: 300px;
-  height: 90px;
   font-size: 15px;
   cursor: pointer;
   margin: 0 auto ;

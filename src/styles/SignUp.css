@@ -2,8 +2,8 @@
   background-color: #010101;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
   background-size: cover;
-  padding-top: 2.45vw;
-  padding-bottom: 2.45vw;
+  padding-top:4.69vw;
+  padding-bottom:4.69vw;
 
 }
 
@@ -67,7 +67,6 @@ input[type="passsword_confirmation"] {
 .submit-form {
   background-color: #992509;
   color: #ffffff;
-  border: 1px solid #000000;
   border-radius: 15px;
   width: 300px ;
   height: 60px;
