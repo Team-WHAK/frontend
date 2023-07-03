@@ -1,130 +1,81 @@
-import React from 'react';
-import { Container, Content, Grid, Row, Col, Panel, } from 'rsuite';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import '../styles/Landing.css';
 
 const Landing = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleBackToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <Container>
-        <Content>
-          <div id="landing">
-            <div className="title-position">
-              <h1 className="title">HoneyHome</h1>
-              <h1 className="title2">Tracker</h1>
-            </div>
-
-            <div className="pic-position">
-              <img src="/images/landing.jpeg" alt="pic" className="pic" />
-            </div>
+    <>
+      <div className='home-container '>
+        <div className='home-title'>
+          <h1>Honey Home</h1>
+        </div>
+        <div className='home-sub flicker'>
+          <h2>Tracker</h2>
+        </div>
+        <div >
+          <img src='../images/bee3.png' style={{ height: '900px', width: '1600px', marginRight: '900px', marginTop: '-60px' }} />
+        </div>
+        <div className='open-statement'>
+          <h3>Manage your home products with ease and never miss a maintenance task again!</h3>
+        </div>
+        <div className='panels'>
+          <div className='panel'>
+            <img src="../images/secure.png" className="panel1-img" />
+            <h3 style={{ fontSize: '60px' }}>Secure Manager!</h3>
+            <p style={{ fontSize: '36px' }}>Log in securely and track your essential tasks for efficient completion.</p>
           </div>
-        </Content>
-      <Content>
-        <div id="para">
-          <div className="note-position">
-            <h1 className="note">
-              Manage your home products with ease and never miss a maintenance
-              task again!
-            </h1>
+          <div className='panel'>
+            <img src="../images/chat.png" className="panel1-img" />
+            <h3 style={{ fontSize: '60px' }}>Get help today!</h3>
+            <p style={{ fontSize: '36px' }}>Receive assistance from a built in opertor, ready to help handle any task.</p>
+          </div>
+          <div className='panel'>
+            <img src="../images/happy.png" className="panel1-img" />
+            <h3 style={{ fontSize: '60px' }}>Live Freely!</h3>
+            <p style={{ fontSize: '36px' }}>Become a task master and give yourself more time to enjoy what matters to you.</p>
           </div>
         </div>
-
-        <br />
-        <br />
-
-        <div id="key-features">
-          <Grid fluid>
-            <Row>
-              <Col md={12} lg={6}>
-                <Panel className="points">
-                  <h1 className="tit">Key Features</h1>
-
-                  <br />
-                  <br />
-                  <br />
-
-                  <div className="subtit">
-                    <h2>
-                      Securely log in and manage your inventory, scheduling
-                      maintenance tasks and tracking their history for every
-                      household item.
-                    </h2>
-
-                    <br />
-                    <br />
-
-                    <h2>
-                      Receive timely notifications and alerts for expiring
-                      warranties and pending maintenance tasks ensuring you stay
-                      on top of your home maintenance.
-                    </h2>
-
-                    <br />
-                    <br />
-
-                    <h2>
-                      Search and filter through your products and tasks quickly
-                      with an intuitive and user-friendly interface that adapts
-                      to any device.
-                    </h2>
-                  </div>
-                </Panel>
-              </Col>
-              <Col md={12} lg={6}>
-                <div id="house-pic">
-                  <img src="/images/house.jpeg" alt="house" className="house" />
-                </div>
-              </Col>
-            </Row>
-          </Grid>
+        <div className='closing-statement'>
+          <h3>Ready to become a home maintenance master? Maximize your home’s value and organization today!</h3>
         </div>
-
-        <div id="boxes">
-          <div className="box1">
-            <h2> Join the Team</h2>
-            <p>Become a member</p>
-            <button className="link-btn">{" > "}</button>
-          </div>
-
-          <br />
-          <br />
-
-          <div className="box2">
-            <h2> Stay on Task</h2>
-            <p>Become a member</p>
-            <button>{" > "}</button>
-          </div>
-
-          <br />
-          <br />
-
-          <div className="box3">
-            <h2> Responsive experience</h2>
-            <p>Become a member</p>
-            <button>{" > "}</button>
-          </div>
+        <div className='closing-image'>
+          <img src="../images/bee1.png" style={{ height: '900px', width: '1200px', marginLeft: '1900px', marginTop: ' -820px' }} />
         </div>
-
-        <div id="message">
-          <div className="ready">
-            <h2>
-              Ready to become a home maintenance master? Maximize your home's
-              value and organization today!{" "}
-            </h2>
-          </div>
-
-          <div className="btns">
-            <button className="B1">Sign Up</button>
-            <button className="B2">Demo</button>
-          </div>
+        <div className="signup-button">
+          <Link to="/signup">
+            <button>Sign Up</button>
+          </Link>
         </div>
-
-        <div id="fam-img">
-          <img src="/images/family.jpeg" alt="family" className="fam" />
-        </div>
-      </Content>
-    </Container>
+        {showBackToTop && (
+          <button className="back-to-top" onClick={handleBackToTop}>
+            Back to Top
+          </button>
+        )}
+      </div>
+    </>
   );
 };
 
 export default Landing;
-
-//BEFORE SIGNIN
