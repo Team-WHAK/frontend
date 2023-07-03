@@ -50,7 +50,7 @@ label {
   display: block;
   font-weight: bold;
   font-size: 17.5px;
-  text-shadow: -.5px -.5px 0 #fff, .5px -.5px 0 #fff, -.5px .5px 0 #fff, .5px .5px 0 #fff;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 input[type="email"],
@@ -58,30 +58,27 @@ input[type="password"],
 input[type="passsword_confirmation"] {
   width: 100%;
   padding: 4px;
-  border: .5px solid #000000;
+  border: 1px solid #000000;
   border-radius: 7.5px;
   height: 30px;
 
 }
 
-.form-submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.submit-btn {
+.submit-form {
   background-color: #992509;
   color: #ffffff;
-  border: .5px solid #000000;
-  border-radius: 7.5px;
-  width: 300px;
-  height: 45px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  width: 300px ;
+  height: 60px;
   font-size: 15px;
   cursor: pointer;
   margin: 0 auto;
   font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .login-link {
