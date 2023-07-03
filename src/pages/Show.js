@@ -8,7 +8,7 @@ const Show = ({ tasks, currentUser }) => {
   
   const { id } = useParams();
 
-  const task = mockTasks?.find((item) => item.id === +id);
+  const task = tasks?.find((item) => item.id === +id);
 
   return (
     <div id="page">
@@ -22,10 +22,13 @@ const Show = ({ tasks, currentUser }) => {
             style={{ width: "240px" }}
             className="panel-component"
           >
-            <img src={task.image} alt={task.name} className="img" />
-            <Panel header={task.task_name} className="content-panel">
-              <p className="task-area">{task.area}</p>
-              <p className="task-item">{task.item}</p>
+            <img src={task.picture} alt={task.name} className="img" />
+            <Panel className="content-panel">
+              <div className="trying">
+              <p className="task-header">Task: {task.task_name}</p>
+              <p className="task-area">Area: {task.area}</p>
+              <p className="task-item">Item: {task.item}</p>
+              </div>
               <p className="description">{task.task_descr}</p>
               <div className="button-container">
                 <Link to="/indexpage">

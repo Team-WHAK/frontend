@@ -22,7 +22,7 @@ const Home = ({ currentUser }) => {
   return (
     <div id='portal'>
       <h1 className='welcome animate__animated animate__fadeInDown animate__slower 3s animate__delay-1s	1s' 
-      >Welcome {currentUser} </h1>
+      >DASHBOARD {currentUser} </h1>
       <div className="shadow">
         <div className="card-container">
           <div className="index-hex animate__animated animate__fadeInLeft animate__slower	3s">
@@ -38,7 +38,7 @@ const Home = ({ currentUser }) => {
           <div onClick={handleChatToggle}>
             <div className="chat-hex animate__animated animate__fadeInRight animate__slower	3s" >
 
-              <Card title="Personal Assistant" />
+              <Card title="Chat" />
             </div>
           </div>
         </div>
