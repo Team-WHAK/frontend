@@ -1,556 +1,103 @@
-## init code:
+<p align="center">
+<img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimg.freepik.com%2Ffree-vector%2Fhoney-comb-cartoon-vector-icon-illustration-food-nature-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3660.jpg%3Ft%3Dst%3D1688076373%7Eexp%3D1688076973%7Ehmac%3Dc6e53342cb78ba1bc1cfa000a9b682eb0b154a12593eb70160dc8f20d49cf537" width="900" height="400">
+</p>
 
-import React from 'react';
-
-
-const \name\ = () => {
-    return (
-        <>
-        </>
-    )
-}
-
-export default \name\;
-
-
-## Init Header:
-
-import React from 'react';
-import { Navbar, Nav } from 'rsuite';
-import '../styles/Header.css';
-
-const Header = () => {
-  return (
-    <>
-<Navbar id='nav'>
-<Nav className='left'>
-<img src="/images/logo.jpeg" alt="Logo" className="logo" />
-<Nav.Item href=''>Home</Nav.Item>
-<Nav.Item href=''>About Us</Nav.Item>
-<Nav.Item href=''>Contact</Nav.Item>
-</Nav>
-<Nav className='right'>
-<Nav.Item href=''>Sign In</Nav.Item>
-<Nav.Item href=''>Sign Up</Nav.Item>
-</Nav>
-</Navbar>
- <Container>
-      <Content>
-        <div id="landing">
-
-          <div className="title-position">
-            <h1 className="title">HoneyHome</h1>
-            <h1 className="title2">Tracker</h1>
-          </div>
-
-          <div className="pic-position">
-            <img src="/images/landing.jpeg" alt="pic" className="pic" />
-          </div>
-
-        </div>
-    </Container>
- </Content>
- </>
-  );
-};
-
-export default Header;
-
-
-
-## INIT Footer:
-
-import React from 'react';
-import { Navbar, Nav } from 'rsuite';
-
-import '../style/Footer.css';
-
-
-
-const Footer = () => {
-    return (
-   <Navbar id='footer'>
-   <Nav className='TM'>
-    <Nav.Item> © Whak inc. 2023. All rights reserved. </Nav.Item>
-    </Nav>
-   </Navbar>  
-    )
-}
-
-export default Footer;
-
-
-## We are going to Need a Landing Page for when the user is not Signed in 
-
-
-sections from wire frame: 8 
-
-<div>
-2 X <h1>
-<img />
-</div>
-
-<div>
+<h1>
+  <p align="center">
+    <strong><ins>Honey Home by Team WHAK</ins></strong>
+    </br>
+  <em>Will, Halie, Aubrey, Kyle</em>
+  </br>
+  </br>
+    live version link
+  </p>
+<br/>
 <h2>
-</div>
-
-<div>
-<h1></h1>
-3 X <h2>
-<img />
-</div>
-
-<div>
-3 X <h3>
-3 X <h4>
-3 X <button>
-</div>
-
-<div>
+  <p align="center">
+    Honey Home streamlines your maintenance needs, putting convenience and peace of mind at your fingertips. Discover a new level of efficiency by creating each task in a profile and set a reminder as necessary. You can create, update and delete any maintenance task in your profile for each room you have in your space. Say goodbye to the complexities of managing your maintenance routine as we effortlessly track and schedule essential tasks for you and your family!
+  </p>
+  </h2>
+</br>
 <h2>
-2 X <button>
-</div>
+<table>
+  <strong><ins>This project includes:</ins></strong>
+  </br>
+    1. Welcome page</br>
+    2. Ability to sign up or log in</br>
+    3. Page to navigate My Tasks</br>
+    4. Page to Edit/Delete Task</br>
+    5. Page for 'Personal Assistant'</br>
+    6. Page to add, edit a task in your profile</br>
+    7. Ability to delete and edit tasks in profile</br>
+    8. Contact Page</br>
+</table>
+</h2>
+</br>
+</br>
+<h2>
+  <p>
+    <strong><ins>To code within this project...</ins></strong>
+      </br>
+        1. Clone Honey Home locally</br>
+        2. Run dependencies from list below in bash/command line</br>
+        3. Code away!
+  </p>
+</br>
+</h2>
+<h2> 
 
-<div>
-<img />
-</div>
-
-<div>
-9 X Links
-</div>
-
-<div>
-<img />
-3 X Links
-</div>
-
-
-Icebox Links code:
-
-                <div className='R1'>
-                    <ul style={{ display: 'flex', justifyContent: 'center', gap:'30vw', listStyleType: 'none' }}>
-                        <li>
-                            <a href= '' target='' rel=''>Products</a>
-                        </li>
-                        <li>
-                            <a href= '' target='' rel=''>FAQ</a>
-                        </li>
-                        <li>
-                            <a href= '' target='' rel=''>Legal</a>
-                        </li>
-                    </ul>
-                </div>
-
-                    <div className='R2' >
-                        <ul style={{ display: 'flex', justifyContent: 'center', gap:'28vw', listStyleType: 'none' }}>
-                            <li>
-                                <a href= '' target='' rel=''>Scheduling</a>
-                            </li>
-                            <li>
-                                <a href= '' target='' rel=''>Contact</a>
-                            </li>
-                            <li>
-                                <a href= '' target='' rel=''>Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className='R3'>
-                        <ul style={{ display: 'flex', justifyContent: 'center', gap:'25vw', listStyleType: 'none' }}>
-                            <li>
-                                <a href= '' target='' rel=''>Support</a>
-                            </li>
-                            <li>
-                                <a href= '' target='' rel=''>Testimonials</a>
-                            </li>
-                            <li>
-                                <a href= '' target='' rel=''>Terms&Conditions</a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-            </div> */} 
-
-## NEW
-We are going to need a modal
-
-const TaskNew = ({ createTask, currentUser}) => {
-  const [newTask, setNewTask] = useState({
-    Area: "",
-    Item: "",
-    Image: "",
-    Task: "",
-    Description: "",
-    Frequency: "",
-    Due date: "",
-    user_id: currentUser?.id
-  });
-
-const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    setNewTask({ ...newTask, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = () => {
-    createTask(newTask);
-    navigate("/taskIndex");
-  };
-
-      <>
-      <Form className="formstyle">
-        <FormGroup>
-          <Label for="area">Area</Label>
-          <Input
-            type="text"
-            name="area"
-            onChange={handleChange}
-            value={newTask.area}
-          />
-        </FormGroup>
-
-        <FormGroup>
-          <Label for="item">Item</Label>
-          <Input
-            type="text"
-            name="item"
-            onChange={handleChange}
-            value={newTask.item}
-          />
-        </FormGroup>
-
-        <FormGroup>
-          <Label for="image">Image</Label>
-          <Input
-            type="text"
-            name="image"
-            onChange={handleChange}
-            value={newTask.image}
-          />
-        </FormGroup>
-
-        <FormGroup>
-          <Label for="task">Task</Label>
-          <Input
-            type="text"
-            name="task"
-            onChange={handleChange}
-            value={newTask.task}
-          />
-        </FormGroup>
-
-        <FormGroup>
-          <Label for="task_description">Description</Label>
-          <Input
-            type="text"
-            name="task_description"
-            onChange={handleChange}
-            value={newTask.task_description}
-          />
-        </FormGroup>
-
-        <FormGroup>
-  <Label for="frequency">Frequency</Label>
-  <Input
-    type="text"
-    name="frequency"
-    onChange={handleChange}
-    value={newTask.frequency}
-  />
-</FormGroup>
-
-
-        <FormGroup>
-          <Label for="due_date">Due Date</Label>
-          <Input
-            type="text"
-            name="due_date"
-            onChange={handleChange}
-            value={newTask.due_date}
-          />
-        </FormGroup>
-
-       
-</FormGroup>
-</Form>
-<Button color="primary" onClick={handleSubmit} name="submit">
-  Submit New Task
-</Button>
-</>
-);
-};
-=======
-            </div> 
-
-## HOME Content
- The panels are clickable and the routes can change to what we need
-
-Note: This is for CurrentUser
-
-import React, {useState} from "react";
-import ReactDOM from 'react-dom';
-import { Panel, Placeholder, Grid, Row, Col } from 'rsuite';
-import '../styles/Home.css';
-
-const Card = ({ title }) => (
-  <Panel bordered header={title} className="card">
-    <Placeholder.Paragraph />
-  </Panel>
-);
-
-const Home = ({currentUser}) => {
-  return (
-    <div id='portal'>
-      <h1 className='welcome' style={{ display: 'flex', justifyContent: 'center', gap: '3vw', }}>Welcome {currentUser} </h1>
-      <div className="container">
-        <a href="/users/tasks">
-          <Card title="My Tasks"/>
-        </a>
-        <a href="/users/calendar">
-          <Card title="My Calendar"/>
-        </a>
-        <a href="/tasks/add">
-          <Card title="Add Task"/>
-        </a>
-        <a href="/live-agent">
-          <Card title="Live Agent"/>
-        </a>
-      </div>
-    </div>
-  );
-};
-
-export default Home;
-
-
-// AFTER SIGNIN
-
-
-## Not Found:
-
-Has ...
-<div id='container'>
-<div className='txt'>
-<h1>Honey, you’ve stumbled onto a page that doesn’t exist. But don’t buzz off just yet! Come back to the hive, and join the colony. </h1>
-</div>
-<div className='returnBtn'>
-<button></button>
-</div>
-<div className='cutePics'>
-<img src='https://i.imgur.com/840884.png' alt='bee' />
-<img src='https://i.imgur.com/840884.png' alt='bee' />
-</div>
-</div>
-
-
-
-## NEED TO MAKE IT SO THAT THE USER NEEDS TO BE LOGGED IN INORDER TO SEE THE HOME PAGE AND OTHER CONTENT ASSOCIATED.
-
-
-## The following code is for the picture uploading feature on the new page. As of right now, I cannot get this to work while also storing to the db.
-
-here is the handleUpload code
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setNewTask({ ...newTask, picture: reader.result });
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-Here is the form code
-        {/* <Form.Group>
-          <Form.ControlLabel>Picture</Form.ControlLabel>
-          <div className="upload-container">
-            <label htmlFor="image-upload" className="upload-button">
-              Upload Picture
-              <input
-                id="picture"
-                name="picture"
-                placeholder="Provide a picture of the item"
-                type="text"
-                accept="image/*"
-                onChange={handleImageUpload}
-              />
-            </label>
-          </div>
-          {newTask.picture && (
-            <div style={{ maxWidth: "200px" }}>
-              <img
-                src={newTask.picture}
-                alt="Uploaded"
-                style={{
-                  width: "100%",
-                  boxShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
-                  borderRadius: "4px",
-                }}
-              />
-            </div>
-          )}
-        </Form.Group> */}
-
-## Modal For New.js if we decide to use it:
-
-import React, { useState, useEffect } from "react";
-import { Button, Modal, Input, InputGroup, Form, Dropdown, Message } from 'rsuite';
-import { useNavigate } from 'react-router-dom';
-import '../styles/New.css';
-
-const New = ({ createTask, currentUser }) => {
-  const [open, setOpen] = useState(true);
-  const [newTask, setNewTask] = useState({
-    area: "",
-    item: "",
-    picture: "",
-    task_name: "",
-    task_descr: "",
-    frequency: "",
-    due_date: "",
-    user_id: ""
-  });
-
-  const handleInputChange = (value, name) => {
-    setNewTask({ ...newTask, [name]: value });
-  };
-
-  const navigate = useNavigate();
-
-  const [error, setError] = useState(false);
-
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setNewTask({ ...newTask, image: reader.result });
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    createTask(newTask)
-    navigate('/indexpage')
-  };
-
-  useEffect(() => {
-    setOpen(true); // Set showModal to true when component mounts
-  }, []);
-
-  const handleCancel = () => {
-    navigate("/indexpage");
-  };
-
-  const CustomDropdownItem = ({ eventKey, children, ...props }) => (
-    <Dropdown.Item
-      eventKey={eventKey}
-      className="custom-dropdown-item"
-      {...props}
-    >
-      {children}
-    </Dropdown.Item>
-  );
-
-  return (
-    <div id="form">
-      <Modal open={open} >
-        <Modal.Header>
-          <Modal.Title>Add New Task</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form fluid>
-            <Form.Group>
-              <Form.ControlLabel>Area</Form.ControlLabel>
-              <InputGroup>
-                <Input name="area" value={newTask.area} onChange={value => handleInputChange(value, 'area')} />
-              </InputGroup>
-            </Form.Group>
-            <Form.Group>
-              <Form.ControlLabel>Item</Form.ControlLabel>
-              <InputGroup>
-                <Input name="item" value={newTask.item} onChange={value => handleInputChange(value, 'item')} />
-              </InputGroup>
-            </Form.Group>
-            <Form.Group>
-              <Form.ControlLabel>Task Name</Form.ControlLabel>
-              <InputGroup>
-                <Input name="task_name" value={newTask.task_name} onChange={value => handleInputChange(value, 'task_name')} />
-              </InputGroup>
-            </Form.Group>
-            <Form.Group>
-              <Form.ControlLabel>Description</Form.ControlLabel>
-              <InputGroup>
-                <Input name="task_descr" value={newTask.task_descr} onChange={value => handleInputChange(value, 'task_descr')} />
-              </InputGroup>
-            </Form.Group>
-            <Form.Group>
-              <Form.ControlLabel>Frequency</Form.ControlLabel>
-              <InputGroup>
-                <Input name="frequency" value={newTask.frequency} onChange={value => handleInputChange(value, 'frequency')} />
-              </InputGroup>
-            </Form.Group>
-            <Form.Group>
-              <Form.ControlLabel>Due Date</Form.ControlLabel>
-              <InputGroup>
-                <Input name="due_date" value={newTask.due_date} onChange={value => handleInputChange(value, 'due_date')} />
-              </InputGroup>
-            </Form.Group>
-            <Form.Group>
-              <Form.ControlLabel>Image</Form.ControlLabel>
-              <div className="upload-container">
-                <label htmlFor="image-upload" className="upload-button">
-                  Upload Image
-                  <input
-                    id="image-upload"
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageUpload}
-                  />
-                </label>
-              </div>
-              {newTask.image && (
-                <div style={{ maxWidth: '200px' }}>
-                  <img
-                    src={newTask.image}
-                    alt="Uploaded"
-                    style={{
-                      width: '100%',
-                      boxShadow: '0 0 5px rgba(0, 0, 0, 0.2)',
-                      borderRadius: '4px',
-                    }}
-                  />
-                </div>
-              )}
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button appearance="primary" onClick={handleSubmit}>
-            Add Task
-          </Button>
-          <Button appearance="subtle" onClick={handleCancel}>
-            Cancel
-          </Button>
-        </Modal.Footer>
-      </Modal>
-      {error && (
-        <Message
-          color="info"
-          className="text-center mx-auto my-2"
-          style={{ width: "50vw" }}
-        >
-          Error!
-          <br />
-          Please make sure you are logged in and fill out all required fields
-        </Message>
-      )}
-    </div>
-  );
-};
-
-export default New;
+  <p> 
+    <strong><em><ins>Dependencies and Versions:</ins></em></strong>
+      <p>
+          @chatscope/chat-ui-kit-react: ^1.10.1M
+          </br>
+          @chatscope/chat-ui-kit-styles: ^1.4.0
+          </br>
+          @testing-library/jest-dom: ^5.14.1
+          </br>
+          @testing-library/react: ^13.0.0"
+          </br>
+          @testing-library/user-event: ^13.2.1
+          </br>
+          animate.css: ^4.1.1
+          </br>
+          boostrap: ^2.0.0
+          </br>
+          bootstrap: ^5.3.0
+          </br>
+          jest: ^29.5.0
+          </br>
+          react: ^18.2.0
+          </br>
+          react-dom: ^18.2.0
+          </br>
+          react-icons: ^4.10.1
+          </br>
+          react-router-dom: ^6.14.0
+          </br>
+          react-scripts: 5.0.1
+          </br>
+          reactstrap: ^9.2.0
+          </br>
+          rsuite: ^5.35.1
+          </br>
+          web-vitals: ^2.1.0
+      </p>
+  </p>  
+</h2>
+</br>
+</br>
+<h3>
+  <p align="center">
+    <strong>Icebox Features</strong> </br>
+    <img src="https://img.freepik.com/free-vector/scene-with-three-penguins-ice_1308-40356.jpg?size=626&ext=jpg&ga=GA1.2.1986265976.1688416557&semt=ais">
+  </p>
+   <ul>
+    <li>A calendar feature that will link to personal one such as Google Calendar, etc</li>
+    <li>Location cards: Create a card for each location in your house, assign a task within the location</li>
+    <li>Create profile for multiple properties</li>
+    <li>Links for more knowledge on house maintenance</li>
+  </ul>
+</h3>
+</br>
+</br>
