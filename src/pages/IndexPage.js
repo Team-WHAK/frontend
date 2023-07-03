@@ -2,8 +2,6 @@ import React from 'react';
 import { Panel, Button, } from 'rsuite';
 import { Link } from 'react-router-dom';
 import '../styles/IndexPage.css';
-import mockTasks from '../mockTasks'; //delete this after styling is done, also chang mockTasks to myTasks on line 20
-
 const IndexPage = ({ tasks, currentUser, deleteTask }) => {
 
   const handleDeleteTask = (taskId) => {
@@ -11,12 +9,6 @@ const IndexPage = ({ tasks, currentUser, deleteTask }) => {
   }
 
   const myTasks = tasks?.filter(task => currentUser?.id === task.user_id)
-  const itemsPerSlide = 4;
-
-  const taskGroups = [];
-  for(let i = 0; i < myTasks.length; i += itemsPerSlide) {
-    taskGroups.push(myTasks.slice(i, i + itemsPerSlide));
-  }
 
   return (
     <div id="index">
@@ -24,7 +16,7 @@ const IndexPage = ({ tasks, currentUser, deleteTask }) => {
         <div
           className="index-container animate__animated animate__zoomIn animate__slower	2s">
           <div className='task-grid'>
-            {tasks?.map((task) => {
+            {myTasks?.map((task) => {
               return (
                 <Link key={task.id} to={`/show/${task.id}`}>
                   <Panel className='crd'

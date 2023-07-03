@@ -2,15 +2,14 @@
   background-color: black;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
   background-size: cover;
-  padding-top: 4.9vw;
-  padding-bottom: 4.9vw;
+  padding-top: 5.4vw;
+  padding-bottom: 5.4vw;
 }
-
 .contact-form {
-  height: 1200px;
-  width: 1200px;
+  height: 600px;
+  width: 600px;
   margin: 0 auto;
-  padding: 140px;
+  padding: 70px;
   background-color: #f2b02a;
   background-image: url(' https://www.pngmart.com/files/15/Yellow-Bee-Trail-Path-PNG.png ');
   background-size: contain;
@@ -27,12 +26,12 @@
 .snd {
   color: #992509;
   font-family:monospace;
-  font-weight: 800;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 90px;
-  margin-top:50px;
+  font-size: 45px;
+  margin-top:25px;
 }
 
 .form-group3{
@@ -40,24 +39,23 @@
   justify-content: center;
   align-items: left;
   flex-direction: column;
-  gap: 6px;
-  padding-top: 66px;
+  padding-top: 13px;
   font-family: monospace;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 2.5px;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 8px;
+  padding: 4px;
   border: 1px solid #000000;
   border-radius: 15px;
-  height: 60px;
-  font-size: 280px;
+  height: 30px;
+  font-size: 140px;
 }
 
 button[type='submit'] {
@@ -65,11 +63,12 @@ button[type='submit'] {
   color: #ffffff;
   border: 1px solid #000000;
   border-radius: 15px;
-  width: 600px;
+  width: 300px;
   height: 90px;
-  font-size: 30px;
+  font-size: 15px;
   cursor: pointer;
   margin: 0 auto ;
   font-family: monospace;
-  margin-top:50px;
+  margin-top:25px;
 }
+
