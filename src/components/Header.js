@@ -18,36 +18,57 @@ const Header = ({currentUser, logout}) => {
         <Nav className="left">
           <img src="/images/logo.jpeg" alt="Logo" className="logo" />
           {currentUser && (
-            <Nav.Item href="/home" style={{ color: "#992509", textDecoration:'none' }}>
+            <Nav.Item
+              href="/home"
+              style={{ color: "#992509", textDecoration: "none" }}
+            >
               Home
             </Nav.Item>
           )}
           {!currentUser && (
-            <Nav.Item href="/" style={{ color: "#992509", textDecoration:'none' }}>
+            <Nav.Item
+              href="/"
+              style={{ color: "#992509", textDecoration: "none" }}
+            >
               Home
             </Nav.Item>
           )}
-          <Nav.Item href="/aboutus" style={{ color: "#992509", textDecoration:'none' }}>
+          <Nav.Item
+            href="/aboutus"
+            style={{ color: "#992509", textDecoration: "none" }}
+          >
             About Us
           </Nav.Item>
-          <Nav.Item href="/contact" style={{ color: "#992509", textDecoration:'none' }}>
+          <Nav.Item
+            href="/contact"
+            style={{ color: "#992509", textDecoration: "none" }}
+          >
             Contact
           </Nav.Item>
         </Nav>
         <Nav className="right">
           {currentUser && (
             <>
-              <Nav.Item onClick={handleClick}>
-                <input type="button" value="Log Out" />
+              <Nav.Item
+                onClick={handleClick}
+                style={{ color: "#992509", textDecoration: "none" }}
+              >
+                Log Out
               </Nav.Item>
             </>
           )}
           {!currentUser && (
             <>
-              <Nav.Item href="/login" style={{ color: "#992509", textDecoration:'none' }}>
+              <Nav.Item
+                href="/login"
+                style={{ color: "#992509", textDecoration: "none" }}
+              >
                 Log In
               </Nav.Item>
-              <Nav.Item href="/signup" style={{ color: "#992509", textDecoration:'none' }}>
+              <Nav.Item
+                href="/signup"
+                style={{ color: "#992509", textDecoration: "none" }}
+              >
                 Sign Up
               </Nav.Item>
             </>
