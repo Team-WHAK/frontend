@@ -39,7 +39,7 @@ const LogIn = ({ login }) => {
           </form>
           <br />
           <div className='login-link2'>
-            Not registered yet, <a href="/signup">Signup</a>
+            Not registered yet, <a href="/signup">Sign Up</a>
           </div>
         </div>
       </div>

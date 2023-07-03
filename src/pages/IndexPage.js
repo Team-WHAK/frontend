@@ -24,7 +24,7 @@ const IndexPage = ({ tasks, currentUser, deleteTask }) => {
         <div
           className="index-container animate__animated animate__zoomIn animate__slower	2s">
           <div className='task-grid'>
-            {mockTasks?.map((task) => {
+            {tasks?.map((task) => {
               return (
                 <Link key={task.id} to={`/show/${task.id}`}>
                   <Panel className='crd'
