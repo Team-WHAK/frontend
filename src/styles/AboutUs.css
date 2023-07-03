@@ -71,7 +71,7 @@
 .name {
   margin-bottom: 24vw;
   font-family:monospace;
-  font-size: 120px;
+  font-size: 60px;
   font-weight: 800;
   color: #000000;
   -webkit-text-stroke-width: 2px;
@@ -97,9 +97,9 @@
 
 }
 .parag {
-  width: 23vw;
+  width: 50vw;
   font-family:monospace;
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 800;
   color: #000000;
   -webkit-text-stroke-width: 2px;
@@ -124,9 +124,9 @@
 
 .pdc-tit {
   font-family:monospace;
-  font-size: 140px;
+  font-size: 70px;
   padding-top: 3vw;
-  padding-right: 330px;
+  padding-right: 220px;
   font-weight: 800;
   color: #000000;
   -webkit-text-stroke-width: 2px;
@@ -144,12 +144,12 @@
 }
 
 .pdct {
-  height: 15vw;
-  width: 2100px;
-  font-size: 69px;
+  height: 7vw;
+  width: 1100px;
+  font-size: 35px;
   font-family:monospace;
   padding-top: 3vw;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #f2b02a;
   text-shadow:
   0 0 5px #f2b02a,
@@ -168,11 +168,11 @@
     right: 60px;
     background-color: #992509;
     color: white;
-    font-size: 36px;
+    font-size: 18px;
     padding: 10px 20px;
     cursor: pointer;
-    height:300px;
-    width: 300px;
+    height:150px;
+    width: 150px;
     clip-path: polygon(50% 0%,
     100% 25%,
     100% 75%,
