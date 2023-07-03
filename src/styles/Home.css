@@ -1,10 +1,10 @@
 #portal {
   height: 84vh;
   width: 100%;
-  background-color: #010101;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
+  background-color: #f2b02a;
+  /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg'); */
   background-size: cover;
-  padding-top: 160px;
+  padding-top: 30px;
   overflow: hidden;
 }
 
@@ -13,34 +13,36 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 90px;
 }
 
 .new-hex,
 .index-hex,
 .chat-hex{
-height:600px ;
-width: 600px;
+height:275px ;
+width: 275px;
 clip-path: polygon(50% 0%,
 100% 25%,
 100% 75%,
 50% 100%,
 0% 75%,
 0% 25%);
-font-size: 40px;
+font-size: 20px;
 font-family: monospace;
-padding-top: 250px;
+padding-top: 200px;
 text-align: center;
 color: #010101 !important;
+margin: -45px
 }
 
 .welcome{
-  font-size: 120px;
+  font-size: 55px;
   font-family: monospace;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #f2b02a;
   text-shadow:
@@ -54,19 +56,28 @@ color: #010101 !important;
 }
 
 .new-hex{
-  background-image: url('https://i1.pickpik.com/photos/762/164/882/paper-composition-business-writing-preview.jpg');
-  background-size: cover;
+  background-image: url('https://cdn.pixabay.com/photo/2012/04/10/23/39/sign-27080_1280.png');
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-color: rgba(207, 117, 8, 0.678);
 }
 
 .index-hex{
-  background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/frdirectmedia00009-image-kwvyjlho.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=f4dea83aca366fa4d1cc0e6787bb502c ');
-  background-size: cover;
+  background-image: url('https://cdn.pixabay.com/photo/2012/04/01/19/32/tools-24220_1280.png');
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-color:rgba(207, 117, 8, 0.678);
 
 }
 
 .chat-hex{
-  background-image: url(' https://s.yimg.com/ny/api/res/1.2/R12Wfr4sKwal1MEEZ9ec7w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/bgr_208/a7fbcb8da4b93f36b8b5482b5f5614bd');
-  background-size: cover;
+  background-image: url('https://cdn.pixabay.com/photo/2013/03/30/00/10/comments-97860_1280.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-color:rgba(207, 117, 8, 0.678);
   cursor: pointer;
 }
 

@@ -10,12 +10,12 @@
   }
 
 .practice-container {
-    width: 1200px;
-    height: 1200px;
+    width: 800px;
+    height: 800px;
     padding: 20px;
     background-color: #f2b02a;
     background-image: url('https://www.culinaryschools.org/clipart/honey/honeycomb.gif');
-    background-size: cover;
+    background-size: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,32 +29,43 @@
 }
 
 .img {
-    width: 540px !important;
-    height: 340px !important;
+    width: 250px !important;
+    height: 250px !important;
     object-fit: cover;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     background-color: beige;
-    margin-left: -145px;
     border-radius: 15px;
 }
 
 .content-panel {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     width: 700px;
-    padding:  20px;
+    padding:  10px;
     font-family: monospace;
-    font-size: 30px;
-    background-color: rgba(242, 176, 42, 0.7);
+    font-size: 22px;
+    background-color: rgba(242, 176, 42, 0.8);
     color: #000000;
     margin-left:-230px;
     border-radius: 15px;
+    
+
 }
 
+.task-header{
+    margin-bottom: 0px;
+}
+
+.task-area{
+    margin-bottom: 0px;
+}
+
+.trying{
+    text-align:center;
+}
 .description {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.4;
     margin-bottom: 20px;
     text-align: left;
@@ -62,7 +73,7 @@
 }
 
 .return-button {
-    width: 100%;
+    width: 40%;
     background-color: #992509;
     color: white;
     border-radius: 15px;

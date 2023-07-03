@@ -1,15 +1,28 @@
-import { render, screen } from "@testing-library/react";
+import { getByAltText, getByRole, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Landing from "../pages/Landing";
 
 describe("<Landing />", () => {
-  it("has an image and attributes assigned to it", () => {
+
+  beforeEach(() => {
     render(
       <BrowserRouter>
         <Landing />
       </BrowserRouter>
     )
-    const imgAlt = screen.getByAltText(/house/i);
-    expect(imgAlt).toHaveAttribute("alt", "house");
   })
+
+  it("renders without crashing", () =>{})
+
+  it("has title Home", () => {
+    const heading = screen.getByRole('heading', {
+      name: /honey home/i
+    })
+  })
+
+  it("has title tracker", () => {
+    const heading = screen.getByRole("heading", {
+      name: /tracker/i,
+    });
+  });
 })

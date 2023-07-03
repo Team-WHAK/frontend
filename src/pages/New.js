@@ -168,8 +168,8 @@ const New = ({ createTask, currentUser }) => {
           </Form.Group>
           <div className='form-layout'>
             <div className="btnPos">
-              <Button onClick={handleSubmit}>Submit Task</Button>
-              <Button onClick={handleCancel}>Cancel</Button>
+              <Button style={{backgroundColor:'#992509', color:'#ffffff'}} onClick={handleSubmit}>Submit Task</Button>
+              <Button  style={{backgroundColor:'#000000', color:'#ffffff'}} onClick={handleCancel}>Cancel</Button>
             </div>
           </div>
         </Form>

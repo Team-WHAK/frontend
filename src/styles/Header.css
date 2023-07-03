@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   gap: 3vw;
-  margin-left: 160px;
+  margin-left: 90px;
 }
 
 .right {
@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 3vw;
-  margin-right: 160px;
+  margin-right: 90px;
 }
 
 .NavItem {

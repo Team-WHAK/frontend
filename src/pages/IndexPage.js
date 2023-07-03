@@ -2,7 +2,6 @@ import React from 'react';
 import { Panel, Button, } from 'rsuite';
 import { Link } from 'react-router-dom';
 import '../styles/IndexPage.css';
-
 const IndexPage = ({ tasks, currentUser, deleteTask }) => {
 
   const handleDeleteTask = (taskId) => {
