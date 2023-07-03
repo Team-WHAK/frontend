@@ -1,15 +1,26 @@
 import Edit from '../pages/Edit'
 import React from 'react'; import { render, screen, } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter, Route, Routes } from 'react-router-dom';
+import mockTasks from '../mockTasks';
+import mockUsers from '../mockUsers';
 
 describe("<Edit />", () => {
 
   beforeEach(() => {
-
     render(
-      <BrowserRouter>
-        <Edit />
-      </BrowserRouter>
+      <MemoryRouter initialEntries={["/edit/1"]}>
+        <Routes>
+          <Route
+            path="/edit/:id"
+            element={
+              <Edit
+                tasks={mockTasks}
+                currentUser={mockUsers[0]}
+              />
+            }
+          />
+        </Routes>
+      </MemoryRouter>
     );
   });
 
