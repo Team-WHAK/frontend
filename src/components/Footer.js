@@ -13,17 +13,17 @@ const Footer = () => {
               <ul style={{ display: 'flex', justifyContent: 'center', gap: '3vw', listStyleType: 'none' }}>
                 <li>
                   <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                    <FaTwitter style={{ color: '#992509', fontSize: '60px' }} />
+                    <FaTwitter style={{ color: '#992509', fontSize: '30px' }} />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <FaFacebook style={{ color: '#992509', fontSize: '60px' }} />
+                    <FaFacebook style={{ color: '#992509', fontSize: '30px' }} />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram style={{ color: '#992509', fontSize: '60px' }} />
+                    <FaInstagram style={{ color: '#992509', fontSize: '30px' }} />
                   </a>
                 </li>
               </ul>

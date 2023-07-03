@@ -1,7 +1,7 @@
 #footer {
   background-color: black;
   text-align: left;
-  font-size: 50px;
+  font-size: 25px;
 }
 
 
@@ -14,10 +14,10 @@
 
 .soc {
   padding-top: 0.5vw;
-  margin-right: 165px;
+  margin-right: 93px;
 }
 .TM{
-  margin-left: 160px;
+  margin-left: 90px;
   width: 100vw;
   overflow: hidden !important;
 }

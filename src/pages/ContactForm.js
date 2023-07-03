@@ -30,20 +30,20 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit}>
 
           <div className="form-group3">
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+            <label style={{fontSize:'20px'}}>Name</label>
+            <input type="text" id="name" name="name"  style={{height:'35px', fontSize:'18px'}} value={formData.name} onChange={handleChange} />
           </div>
 
           <div className="form-group3">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+            <label style={{fontSize:'20px'}}>Email</label>
+            <input type="email" id="email" name="email" style={{height:'35px',fontSize:'18px'}} value={formData.email} onChange={handleChange} />
           </div>
 
           <div className="form-group3">
-            <label htmlFor="message">Message</label>
-            <textarea id="msg" name="message" rows="5" value={formData.message} onChange={handleChange} />
+            <label style={{fontSize:'20px'}}>Message</label>
+            <textarea id="msg" name="message" rows="5" style={{ height:'100px', maxHeight:'100px', fontSize:'18px',}} value={formData.message} onChange={handleChange} />
           </div>
-          <button type="submit" className='form-submit'>Submit</button>
+          <button type="submit" style={{height:'50px', width:'160px', marginLeft:'145px'}}>Submit</button>
         </form>
 
       </div>
