@@ -27,7 +27,7 @@ const NotFound = () => {
          background:'none', 
          color: '#ffffff', 
          fontSize:'40px', 
-         borderRadius:'15px',
+         borderRadius:'90px',
           border:'6px solid #992509', 
           boxShadow: ' 6px 6px 24px #992509'}} 
           onClick={handleReturnHome}>

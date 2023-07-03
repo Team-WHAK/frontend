@@ -43,16 +43,13 @@ const AboutUs = () => {
             /> </div>
           <h3 className="name">Kyle</h3>
           <a href="" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin style={{ color: '#992509', fontSize: '60px' }} />
+            <FaLinkedin style={{ color: '#992509', fontSize: '90px' }} />
           </a>
           <a href="" target="www.github.com" rel="noopener noreferrer">
-            <FaGithub style={{ color: '#992509', fontSize: '60px' }} />
+            <FaGithub style={{ color: '#992509', fontSize: '90px' }} />
           </a>
           <p className="parag" style={{ marginRight: "9vw" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Kyle's a software engineering with military experience, bringing a unique perspective to problem-solving. He is  passionate about using technology to make a positive impact. He thrives in high-stress situations, and fosters collaborative work environments.
           </p>
         </div>
         <div className="two " >
@@ -66,7 +63,7 @@ const AboutUs = () => {
             rel="noopener noreferrer"
           >
 
-            <FaLinkedin style={{ color: '#992509', fontSize: '60px' }} />
+            <FaLinkedin style={{ color: '#992509', fontSize: '90px' }} />
 
 
           </a>
@@ -75,7 +72,7 @@ const AboutUs = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub style={{ color: '#992509', fontSize: '60px' }} />
+            <FaGithub style={{ color: '#992509', fontSize: '90px' }} />
 
           </a>
           <p className="parag" style={{ marginLeft: "9vw" }}>
@@ -99,14 +96,14 @@ const AboutUs = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin style={{ color: '#992509', fontSize: '60px' }} />
+          <FaLinkedin style={{ color: '#992509', fontSize: '90px' }} />
         </a>
         <a
           href="https://github.com/wabowen89"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub style={{ color: '#992509', fontSize: '60px' }} />
+          <FaGithub style={{ color: '#992509', fontSize: '90px' }} />
 
         </a>
         <p className="parag" style={{ marginRight: "9vw" }}>
@@ -127,14 +124,14 @@ const AboutUs = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin style={{ color: '#992509', fontSize: '60px' }} />
+          <FaLinkedin style={{ color: '#992509', fontSize: '90px' }} />
         </a>
         <a
           href="https://github.com/haliespaige"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub style={{ color: '#992509', fontSize: '60px' }} />
+          <FaGithub style={{ color: '#992509', fontSize: '90px' }} />
 
         </a>
         <p className="parag" style={{ marginLeft: "9vw" }}>
@@ -145,16 +142,10 @@ const AboutUs = () => {
           spends her free time outdoors in sunny San Diego!
         </p>
       </div>
-      <div className="product" style={{ marginBottom: '600px' }}>
+      <div className="product" style={{ marginBottom: '900px' }}>
         <h1 className="pdc-tit">Our Product</h1>
         <p className="pdct" >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Honey Home, born at LEARN Academy, is a user-friendly task manager app that empowers individuals to prioritize and track tasks, enabling them to pursue their passions and live more fulfilling lives. With streamlined task management and a clear interface, users can focus on what truly matters and achieve their goals with efficiency. Honey Home is the perfect tool for balancing personal and professional responsibilities, helping users reclaim their time and maximize productivity.
         </p>
       </div>
       {showBackToTop && (
