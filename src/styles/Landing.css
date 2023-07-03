@@ -3,18 +3,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top:260px;
+  padding-top:130px;
   background-color: black;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
   background-size: contain;
 }
 
 .home-title h1{
-  font-size: 420px;
+  font-size: 210px;
   font-family:monospace;
-  margin-right: 200px;
-  margin-top: 90px;
-  -webkit-text-stroke-width: 2px;
+  margin-right: 100px;
+  margin-top: 45px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #f2b02a;
   text-shadow:
   0 0 5px #f2b02a,
@@ -45,9 +45,9 @@
 }
 
 .home-sub h2{
-  font-size: 120px;
-  margin-left: 1750px;
-margin-top:-60px;
+  font-size: 60px;
+  margin-left: 875px;
+margin-top:-30px;
 transform: rotate(-20deg);
 font-family: 'Zapfino';
 -webkit-text-stroke-color: #992509;
@@ -61,12 +61,11 @@ text-shadow:
 ;
 }
  .open-statement h3{
-  /* color: #ffffff; */
-  font-size: 90px;
+  font-size: 45px;
   font-family: monospace;
   margin:0 auto;
-  padding-top: 850px;
-  width:1400px;
+  padding-top: 425px;
+  width:700px;
   -webkit-text-stroke-color: #f2b02a;
   text-shadow:
   0 0 5px #f2b02a,
@@ -82,8 +81,8 @@ text-shadow:
   display: flex;
   flex-direction: row;
   justify-content: space-between !important; 
-  margin-top: 6vw;
-  margin-bottom: 6vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
   color:#000000;
   gap:100px;
 }
@@ -91,30 +90,30 @@ text-shadow:
 
 
 .panel{
-  width: 900px;
-  height: 900px;
+  width: 450px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   background-color: rgba( 242, 176, 42, 0.6);
-  border-radius: 90px;
-  padding: 50px;
+  border-radius: 45px;
+  padding: 25px;
   font-family: monospace;
 }
 
 .panel1-img{
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
 }
 
 .closing-statement h3{
-  font-size: 90px;
+  font-size: 45px;
   font-family: monospace;
-  width:1800px;
+  width:900px;
   text-align: left;
-  margin-top: 690px;
-  margin-right: 1070px;
+  margin-top: 345px;
+  margin-right: 535px;
   -webkit-text-stroke-color: #f2b02a;
   text-shadow:
   0 0 5px #f2b02a,
@@ -127,16 +126,16 @@ text-shadow:
 }
 
 .signup-button button{
-  height: 200px;
-  width: 900px;
-  border-radius: 90px;
-  border: 6px solid #992509; 
-  box-shadow:  6px 6px 24px #992509;
+  height: 100px;
+  width: 450px;
+  border-radius: 45px;
+  border: 3px solid #992509; 
+  box-shadow:  3px 3px 12px #992509;
   background:none;
   color: #ffffff;
-  font-size:60px;
-  margin-bottom: 400px;
-  margin-top: -10px;
-  margin-right: 640px;
+  font-size:30px;
+  margin-bottom: 200px;
+  margin-top: -5px;
+  margin-right: 320px;
 
 }
