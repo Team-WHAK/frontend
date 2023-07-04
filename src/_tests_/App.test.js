@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor, act, renderHook} from '@testing-library/react';
 import App from '../App';
 import { BrowserRouter } from 'react-router-dom';
+// import { act } from 'react-dom/test-utils';
 
 describe('<App />', () => {
 
@@ -38,4 +39,50 @@ describe('<App />', () => {
     })
   });
 
+})
+
+describe('<App /> functionality', () => {
+
+  it("fetches tasks and sets currentUser in useEffect", async () => {
+    global.fetch = jest.fn().mockResolvedValue({
+      json: jest.fn().mockResolvedValue([{id:1, title: "Task 1"}])
+    })
+
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    )
+
+    await waitFor(() => {
+      expect(global.fetch).toHaveBeenCalledWith("http://localhost:3000/tasks")
+      expect(global.fetch).toHaveBeenCalledTimes(1)
+    })
+  })
+
+  // it("creates a new task and updates the state", async () => {
+  //   const app = App()
+  //   const testTask = {id: 1, title: "task 1"}
+
+  //   global.fetch = json.fn().mockResolvedValueOnce({
+  //     json: jest.fn().mockResolvedValueOnce([testTask])
+  //   })
+
+  //   const setTasks = jest.fn()
+
+  //   renderHook(() => app.createTask(testTask, setTasks))
+
+  //   expect(global.fetch).toHaveBeenCalledWith("http://localhost:3000/tasks",
+  //   {
+  //     body: JSON.stringify(testTask),
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     method: "POST"
+  //   })
+
+  //   expect(global.fetch).toHaveBeenCalledTimes(1)
+
+  //   expect(setTasks).toHaveBeenCalledWith([testTask])
+  // })
 })
