@@ -1,0 +1,20 @@
+#edit{
+    background-color: #f2b02a;
+    padding-bottom: 500px;
+    padding: 50px;
+    background-image: url(' https://www.pngmart.com/files/15/Yellow-Bee-Trail-Path-PNG.png ');
+    background-size: 20%;
+    background-position: right 85%;
+    
+    
+}
+
+.edit-form{
+    padding-bottom:80px;
+}
+.edit-header{
+    padding-bottom: 25px;
+}
+.textarea{
+    height: 100px;
+}

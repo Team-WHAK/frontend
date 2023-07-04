@@ -29,7 +29,11 @@ const Show = ({ tasks, currentUser }) => {
               <p className="task-area">Area: {task.area}</p>
               <p className="task-item">Item: {task.item}</p>
               </div>
+
+              <div className="show-description">
               <p className="description">{task.task_descr}</p>
+              </div>
+
               <div className="button-container">
                 <Link to="/indexpage">
                   <Button className="return-button">Return</Button>
