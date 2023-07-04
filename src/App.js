@@ -156,7 +156,7 @@ function App() {
       <Header currentUser={currentUser} logout={logout}/>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home  />} />
         <Route path="/signup" element={<SignUp signup={signup}/>} />
         <Route path="/login" element={<LogIn login={login}/>} />
         <Route path="/loginfail" element={<LogInFail login={login}/>} />
