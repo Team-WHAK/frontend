@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 import '../styles/Landing.css';
 
 const Landing = () => {
@@ -119,6 +118,7 @@ const Landing = () => {
           </button>
         )}
       </div>
+      
     </>
   );
 };
