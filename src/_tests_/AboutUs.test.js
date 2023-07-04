@@ -1,10 +1,19 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { queryByRole, render, screen } from '@testing-library/react';
 import AboutUs from '../pages/AboutUs';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('<AboutUs />', () => {
+
+  beforeEach(() => {
+    render(
+      <BrowserRouter>
+        <AboutUs />
+      </BrowserRouter>
+    )
+  })
+
   it('renders bio section with names and paragraphs', () => {
-    render(<AboutUs />);
 
     // Check if names are rendered
     const nameKyle = screen.getByText('Kyle');
@@ -18,4 +27,18 @@ describe('<AboutUs />', () => {
     expect(nameHalie).toBeInTheDocument();
 
   });
+
+  it('has bio images and attributes assigned to it', () => {
+    const imgKyle = screen.getByAltText(/bio image of kyle/i);
+    const imgAubrey = screen.getByAltText(/bio image of aubrey/i);
+    const imgWill = screen.getByAltText(/bio image of will/i);
+    const imgHalie = screen.getByAltText(/bio image of halie/i);
+
+    expect(imgKyle).toHaveAttribute("alt", "bio image of kyle");
+    expect(imgAubrey).toHaveAttribute("alt", "bio image of aubrey");
+    expect(imgWill).toHaveAttribute("alt", "bio image of will");
+    expect(imgHalie).toHaveAttribute("alt", "bio image of halie");
+  })
+
+
 });
