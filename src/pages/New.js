@@ -25,17 +25,6 @@ const New = ({ createTask, currentUser }) => {
 
   const [error, setError] = useState(false);
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setNewTask({ ...newTask, image: reader.result });
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault()
     createTask(newTask)
