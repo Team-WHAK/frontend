@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import LogIn from '../pages/LogIn';
 
@@ -27,4 +27,25 @@ describe('LogIn', () => {
     const loginButton = screen.getByRole('button', { name: 'Login' })
     expect(loginButton).toBeInTheDocument()
   })
+
+  it("has a login header", () => {
+    const logInHeader = screen.getByText("Log In")
+    expect(logInHeader).toBeInTheDocument()
+  })
 }) 
+
+describe("logIn", () => {
+  it("calls the handleSubmit function", () => {
+    const mockLogin = jest.fn()
+    render(<LogIn login={mockLogin} />)
+
+    fireEvent.change(screen.getByLabelText("Email:"), {target: {value: 'test@example.com'}})
+    fireEvent.change(screen.getByLabelText("Password:"), {target: {value: 'password'} })
+
+    fireEvent.click(screen.getByText("Login"))
+
+    expect(mockLogin).toHaveBeenCalledWith({
+      user: {email: "test@example.com", password: "password"}
+    })
+  })
+})
