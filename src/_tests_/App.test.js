@@ -55,7 +55,7 @@ describe('<App /> functionality', () => {
     )
 
     await waitFor(() => {
-      expect(global.fetch).toHaveBeenCalledWith("http://localhost:3000/tasks")
+      expect(global.fetch).toHaveBeenCalledWith("https://honeyhome.onrender.com/tasks")
       expect(global.fetch).toHaveBeenCalledTimes(1)
     })
   })
