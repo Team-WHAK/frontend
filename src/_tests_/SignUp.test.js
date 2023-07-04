@@ -1,7 +1,12 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { BrowserRouter, MemoryRouter, useNavigate } from 'react-router-dom';
 import SignUp from '../pages/SignUp';
+
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: jest.fn(),
+}));
 
 describe('SignUp', () => {
   
@@ -33,3 +38,39 @@ describe('SignUp', () => {
     expect(submitButton).toBeInTheDocument()
   }) 
 }) 
+
+describe("SignUp functionality", () => {
+
+  it("should prevent form submission", () => {
+    const tempSignup = jest.fn();
+    const navigate = jest.fn();
+    useNavigate.mockReturnValue(navigate);
+
+    const { getByText, getByPlaceholderText } = render(
+      <MemoryRouter>
+        <SignUp signup={tempSignup} />
+      </MemoryRouter>
+    );
+
+    fireEvent.change(getByPlaceholderText("Email"), {
+      target: { value: "test6@example.com" },
+    });
+    fireEvent.change(getByPlaceholderText("Password"), {
+      target: { value: "password" },
+    });
+    fireEvent.change(getByPlaceholderText("Confirm Password"), {
+      target: { value: "password" },
+    });
+
+    fireEvent.click(getByText("Submit"));
+
+    expect(tempSignup).toHaveBeenCalledWith({
+      user: {
+        email: "test6@example.com",
+        password: "password",
+      },
+    });
+
+    expect(navigate).toHaveBeenCalledWith("/home");
+  });
+})
