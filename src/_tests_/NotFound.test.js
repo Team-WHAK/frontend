@@ -23,13 +23,11 @@ describe("<NotFound />", () => {
   });
 
   it("has return to hive button", () => {
-    const heading = screen.getByRole("button", {
+    const button = screen.getByRole("button", {
       name: /Return to the Hive/i,
     });
-  }); 
 
-  it("should navigate to home when return to hive button is clicked", () => {
-    
-  });
+    expect(button).toBeInTheDocument()
+  }); 
 
 });

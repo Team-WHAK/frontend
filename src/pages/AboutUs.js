@@ -33,47 +33,52 @@ const AboutUs = () => {
   return (
     <div id="bio">
       <div className="Normal">
-        <div className="one "
-        >
-          <div className='shadow3'>
+        <div className="one ">
+          <div className="shadow3">
             <img
               src={Kyle}
               className="about-img"
               style={{ marginLeft: "4vw" }}
-            /> </div>
+              alt="bio image of kyle"
+            />{" "}
+          </div>
           <h3 className="name">Kyle</h3>
           <a href="" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin style={{ color: '#992509', fontSize: '45px' }} />
+            <FaLinkedin style={{ color: "#992509", fontSize: "45px" }} />
           </a>
           <a href="" target="www.github.com" rel="noopener noreferrer">
-            <FaGithub style={{ color: '#992509', fontSize: '45px' }} />
+            <FaGithub style={{ color: "#992509", fontSize: "45px" }} />
           </a>
           <p className="parag" style={{ marginRight: "4vw" }}>
-            Kyle's a software engineering with military experience, bringing a unique perspective to problem-solving. He is  passionate about using technology to make a positive impact. He thrives in high-stress situations, and fosters collaborative work environments.
+            Kyle's a software engineering with military experience, bringing a
+            unique perspective to problem-solving. He is passionate about using
+            technology to make a positive impact. He thrives in high-stress
+            situations, and fosters collaborative work environments.
           </p>
         </div>
-        <div className="two " >
-          <div className='shadow3'>
-
-            <img src={Aubrey} className="about-img" style={{ marginRight: "4vw" }} /> </div>
+        <div className="two ">
+          <div className="shadow3">
+            <img
+              src={Aubrey}
+              className="about-img"
+              style={{ marginRight: "4vw" }}
+              alt="bio image of aubrey"
+            />
+          </div>
           <h3 className="name">Aubrey</h3>
           <a
             href="https://www.linkedin.com/in/aubrey-diehl/"
             target="_blank"
             rel="noopener noreferrer"
           >
-
-            <FaLinkedin style={{ color: '#992509', fontSize: '45px' }} />
-
-
+            <FaLinkedin style={{ color: "#992509", fontSize: "45px" }} />
           </a>
           <a
             href="https://github.com/Aubzzz"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub style={{ color: '#992509', fontSize: '45px' }} />
-
+            <FaGithub style={{ color: "#992509", fontSize: "45px" }} />
           </a>
           <p className="parag" style={{ marginLeft: "4vw" }}>
             Aubrey is a navy reservist and outdoor enthusiast who is currently
@@ -86,9 +91,13 @@ const AboutUs = () => {
       </div>
       <div className="reverse"></div>
       <div className="three ">
-        <div className='shadow3'>
-
-          <img src={Will} className="about-img" style={{ marginLeft: "4vw" }} />
+        <div className="shadow3">
+          <img
+            src={Will}
+            className="about-img"
+            style={{ marginLeft: "4vw" }}
+            alt="bio image of will"
+          />
         </div>
         <h3 className="name">Will</h3>
         <a
@@ -96,15 +105,14 @@ const AboutUs = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin style={{ color: '#992509', fontSize: '45px' }} />
+          <FaLinkedin style={{ color: "#992509", fontSize: "45px" }} />
         </a>
         <a
           href="https://github.com/wabowen89"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub style={{ color: '#992509', fontSize: '45px' }} />
-
+          <FaGithub style={{ color: "#992509", fontSize: "45px" }} />
         </a>
         <p className="parag" style={{ marginRight: "4vw" }}>
           Will is a 12-year veteran of the US Navy and avid coder who lives in
@@ -113,10 +121,14 @@ const AboutUs = () => {
           3D printer and playing his guitar.
         </p>
       </div>
-      <div className="four" >
-        <div className='shadow3'>
-
-          <img src={Halie} className="about-img" style={{ marginRight: "4vw" }} />
+      <div className="four">
+        <div className="shadow3">
+          <img
+            src={Halie}
+            className="about-img"
+            style={{ marginRight: "4vw" }}
+            alt="bio image of halie"
+          />
         </div>
         <h3 className="name">Halie</h3>
         <a
@@ -124,15 +136,14 @@ const AboutUs = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin style={{ color: '#992509', fontSize: '45px' }} />
+          <FaLinkedin style={{ color: "#992509", fontSize: "45px" }} />
         </a>
         <a
           href="https://github.com/haliespaige"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub style={{ color: '#992509', fontSize: '45px' }} />
-
+          <FaGithub style={{ color: "#992509", fontSize: "45px" }} />
         </a>
         <p className="parag" style={{ marginLeft: "4vw" }}>
           Halie's transition from sales to software development has provided her
@@ -142,14 +153,21 @@ const AboutUs = () => {
           spends her free time outdoors in sunny San Diego!
         </p>
       </div>
-      <div className="product" style={{ marginBottom: '900px' }}>
+      <div className="product" style={{ marginBottom: "900px" }}>
         <h1 className="pdc-tit">Our Product</h1>
-        <p className="pdct" >
-          Honey Home, born at LEARN Academy, is a user-friendly task manager app that empowers individuals to prioritize and track tasks, enabling them to pursue their passions and live more fulfilling lives. With streamlined task management and a clear interface, users can focus on what truly matters and achieve their goals with efficiency. Honey Home is the perfect tool for balancing personal and professional responsibilities, helping users reclaim their time and maximize productivity.
+        <p className="pdct">
+          Honey Home, born at LEARN Academy, is a user-friendly task manager app
+          that empowers individuals to prioritize and track tasks, enabling them
+          to pursue their passions and live more fulfilling lives. With
+          streamlined task management and a clear interface, users can focus on
+          what truly matters and achieve their goals with efficiency. Honey Home
+          is the perfect tool for balancing personal and professional
+          responsibilities, helping users reclaim their time and maximize
+          productivity.
         </p>
       </div>
       {showBackToTop && (
-        <button className="back-to-top" onClick={handleBackToTop} >
+        <button className="back-to-top" onClick={handleBackToTop}>
           Back to Top
         </button>
       )}
