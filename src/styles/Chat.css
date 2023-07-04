@@ -1,10 +1,91 @@
-/* .chat-container {
-    width: 400px;
-    height: 400px;
-    overflow: auto;
-  }
-  
-  .message-list {
-    max-height: 350px;
-    overflow-y: auto;
-  } */
+@import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
+
+.cs-message-list {
+  background-color: transparent !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  min-height: 1.25em !important;
+  position: relative !important;
+  color: rgba(0, 0, 0, .87) !important;
+}
+
+.cs-message:not(:only-child) {
+  margin: 0.8em !important;
+  padding: 0.4em 0.8em !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  height: 100% !important;
+  width: 100% !important;
+  overflow: auto !important;
+  box-sizing: border-box !important;
+  color: rgba(0, 0, 0, .87) !important;
+  background-color: transparent !important;
+  font-size: 1rem !important;
+  overflow: hidden;
+}
+
+.ps {
+  overflow: hidden !important;
+  overflow-anchor: none !important;
+  -ms-overflow-style: none !important;
+  touch-action: auto !important;
+  -ms-touch-action: auto !important;
+}
+
+.cs-message-list__scroll-wrapper {
+  box-sizing: border-box !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  overflow: hidden !important;
+  padding: 0 1.2em 0 0.8em !important;
+  position: relative !important;
+  max-height: calc(100% - 2.8em) !important;
+}
+
+.cs-chat-container {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-width: 180px !important;
+}
+
+.cs-main-container {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  height: 100% !important;
+  overflow: auto !important;
+  border: solid 1px #d1dbe3 !important;
+  font-size: 1rem !important;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Override existing styles for .scrollbar-container */
+.cs-main-container .scrollbar-container {
+  height: auto !important;
+}
+
+.cs-message-list__scroll-wrapper {
+  overflow-y: auto !important;
+}
+
+.cs-message-list {
+  overflow: hidden !important;
+}
+
