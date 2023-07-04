@@ -35,11 +35,3 @@ describe("<Home />", () => {
     expect(addTask).toBeInTheDocument()
   })
 });
-
-
-// it("renders welcome message and card titles", () => {
-//   const currentUser = "John Doe";
-//   render(<Home currentUser={currentUser} />);
-//   const welcomeMessage = screen.getByText(`Welcome ${currentUser}`);
-//   expect(welcomeMessage).toBeInTheDocument();
-// });
