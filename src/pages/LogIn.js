@@ -34,7 +34,7 @@ const LogIn = ({ login }) => {
               <input type="password" id="password" name="password" placeholder="Password" />
             </div>
             <div className="form-submit">
-              <input type="submit" value="Login" className="submit-btn" />
+              <input type="submit" value="Login" className="login-btn" />
             </div>
           </form>
           <br />
