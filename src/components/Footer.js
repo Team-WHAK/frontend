@@ -30,11 +30,9 @@ const Footer = () => {
             </div>
           </div>
           <Navbar id='footer'>
-
             <Nav className='TM'>
               <Nav.Item style={{textDecoration:'none', color: '#ffffff'}}> © Whak inc. 2023. All rights reserved. </Nav.Item>
             </Nav>
-
           </Navbar>
         </Content>
       </Container>
