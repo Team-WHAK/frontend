@@ -2,18 +2,18 @@
   background-color: #010101;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
   background-size: cover;
-  padding-top: 3.5vw;
-  padding-bottom: 3.5vw;
+  padding-top: 4.69vw;
+  padding-bottom: 4.69vw;
 }
 
 .login-container {
   max-width: 600px;
   height: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 70px;
   background-color: #f2b02a;
   background-image: url(' https://www.pngmart.com/files/15/Yellow-Bee-Trail-Path-PNG.png ');
-  background-size: 80%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
   clip-path: polygon(50% 0%,
@@ -27,12 +27,12 @@
 .entr {
   color: #992509;
   font-family:monospace;
-  font-weight: 800;
+  font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
-  margin-top:50px;
+  font-size: 45px;
+  margin-top:22.5px;
 }
 
 .form-group2 {
@@ -41,29 +41,26 @@
   align-items: left;
   flex-direction: column;
   gap: 6px;
-  padding-top: 5px;
+  padding-top: 35px;
   font-family: monospace;
 }
 
 label {
   display: block;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 17.5px;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 input[type="email"],
 input[type="password"] {
-  width: 50%;
-  padding: 8px;
+  width: 100%;
+  padding: 4px;
   border: 1px solid #000000;
-  border-radius: 15px;
-  height: 60px;
+  border-radius: 7.5px;
+  height: 30px;
 }
 
-/* .form-submit {
-  display: inline-block;
-  font-size: 12px
-} */
 
 .login-btn{
   background-color: #992509;
@@ -78,13 +75,13 @@ input[type="password"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .login-link2 {
-  margin-top: 30px;
+  margin-top: 0px;
   text-align: center;
-  font-size: 15px;
+  font-size: 11.5px;
   font-family: monospace;
 }
 
@@ -98,6 +95,6 @@ color: #992509;
 }
 
 .shadow2{
-  filter: drop-shadow(18px 18px 18px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(9px 9px 9px rgba(255, 255, 255, 0.5));
 }
 

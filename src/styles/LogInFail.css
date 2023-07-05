@@ -1,0 +1,105 @@
+#login-fail {
+    background-color: #010101;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Hexagon_Tiling.svg');
+    background-size: cover;
+    padding-top: 4.69vw;
+    padding-bottom: 4.69vw;
+  }
+  
+  .login-fail-container {
+    max-width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 70px;
+    background-color: #f2b02a;
+    background-image: url(' https://www.pngmart.com/files/15/Yellow-Bee-Trail-Path-PNG.png ');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    clip-path: polygon(50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%);
+  }
+  
+  .entr-fail {
+    color: #992509;
+    font-family:monospace;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-top:35.5px;
+    padding: 14px;
+    text-align: center;
+  }
+  
+  .form-group-fail {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 7px;
+    font-family: monospace;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 17.5px;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #000000;
+    border-radius: 7.5px;
+    height: 30px;
+  }
+  
+  
+  .submit-btn-fail{
+    background-color: #992509;
+    color: #ffffff;
+    border-radius: 15px;
+    width: 300px;
+    height: 60px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .login-link2 {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 11.5px;
+    font-family: monospace;
+  }
+  
+  .signup-btn-fail a {
+  color: #992509;
+    text-decoration: none;
+  }
+  
+  .signup-btn-fail a:hover {
+    text-decoration: underline;
+  }
+  
+  .shadow2{
+    filter: drop-shadow(9px 9px 9px rgba(255, 255, 255, 0.5));
+  }
+  
+  .signup-btn-fail{
+    text-align: center;
+  }
