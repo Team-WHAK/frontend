@@ -65,19 +65,21 @@ input[type="password"] {
   font-size: 12px
 } */
 
-/* .submit-btn{
+.login-btn{
   background-color: #992509;
   color: #ffffff;
-  border: 1px solid #000000;
   border-radius: 15px;
-  padding: 5px 10px;
-  width: 50px;
-  height: 5px;
-  font-size: 5px;
+  width: 300px;
+  height: 60px;
+  font-size: 15px;
   cursor: pointer;
   margin: 0 auto;
   font-family: monospace;
-} */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
 
 .login-link2 {
   margin-top: 30px;
