@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/LogIn.css";
+import "../styles/LogInFail.css";
 
 const LogInFail = ({ login }) => {
     
@@ -19,15 +19,15 @@ const LogInFail = ({ login }) => {
   };
 
   return (
-    <div id="login">
-      <div className="login-container">
-        <h1 className="entr" style={{color: 'red'}}>Invalid username or password. Please try again</h1>
+    <div id="login-fail">
+      <div className="login-fail-container">
+        <h1 className="entr-fail" style={{color: 'red'}}>Invalid username or password. Please try again</h1>
         <form ref={formRef} onSubmit={handleSubmit}>
-          <div className="form-group">
+          <div className="form-group-fail">
             <label htmlFor="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Email" />
           </div>
-          <div className="form-group">
+          <div className="form-group-fail">
             <label htmlFor="password">Password:</label>
             <input
               type="password"
@@ -36,12 +36,12 @@ const LogInFail = ({ login }) => {
               placeholder="Password"
             />
           </div>
-          <div className="form-group">
-            <input type="submit" value="Login" className="submit-btn" />
+          <div className="form-group-fail">
+            <input type="submit" value="Login" className="submit-btn-fail" />
           </div>
         </form>
         <br />
-        <div>
+        <div className="signup-btn-fail">
           Not registered yet, <a href="/signup">Signup</a>
         </div>
       </div>
