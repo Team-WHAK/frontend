@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"
 import { Form, Row, Col, FormGroup, Label, Input, Button, NavLink } from "reactstrap"
+import '../styles/Edit.css';
 
 const Edit = ({ tasks, updateTask, currentUser }) => {
   const { id } = useParams()
@@ -29,20 +30,18 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
   }
 
   return (
-    <div
+    <div id= "edit"
       style={{
-        backgroundImage: "url(back.png)",
-        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h1>{currentTask.task_name}</h1>
-      <Form>
+      <h1 className = "edit-header">Edit: {currentTask?.task_name}</h1>
+      <Form className = "edit-form">
         <Row>
           <Col md={6}>
             <FormGroup>
               <Label for="area">Area:</Label>
-              <Input
+              <Input className = "edit-input"
                 id="area"
                 name="area"
                 placeholder={currentTask?.area}
@@ -55,7 +54,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
           <Col md={6}>
             <FormGroup>
               <Label for="item">Item:</Label>
-              <Input
+              <Input 
                 id="item"
                 name="item"
                 placeholder={currentTask?.item}
@@ -70,7 +69,7 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
           <Col md={6}>
             <FormGroup>
               <Label for="task_name">Task Name:</Label>
-              <Input
+              <Input 
                 id="task_name"
                 name="task_name"
                 placeholder={currentTask?.task_name}
@@ -82,36 +81,8 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
           </Col>
           <Col md={6}>
             <FormGroup>
-              <Label for="task_descr">Task Description:</Label>
-              <Input
-                id="task_descr"
-                name="task_descr"
-                placeholder={currentTask?.task_descr}
-                type="text"
-                onChange={handleChange}
-                value={editTask.task_descr}
-              />
-            </FormGroup>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <FormGroup>
-              <Label for="picture">Picture:</Label>
-              <Input
-                id="picture"
-                name="picture"
-                placeholder={currentTask?.picture}
-                type="text"
-                onChange={handleChange}
-                value={editTask.picture}
-              />
-            </FormGroup>
-          </Col>
-          <Col md={6}>
-            <FormGroup>
               <Label for="frequency">Frequency:</Label>
-              <Input
+              <Input 
                 id="frequency"
                 name="frequency"
                 placeholder={currentTask?.frequency}
@@ -123,10 +94,23 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
           </Col>
         </Row>
         <Row>
-          <Col md={3}>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="picture">Picture:</Label>
+              <Input 
+                id="picture"
+                name="picture"
+                placeholder={currentTask?.picture}
+                type="text"
+                onChange={handleChange}
+                value={editTask.picture}
+              />
+            </FormGroup>
+          </Col>
+          <Col md={6}>
             <FormGroup>
               <Label for="due_date">Due Date:</Label>
-              <Input
+              <Input 
                 id="due_date"
                 name="due_date"
                 placeholder={currentTask?.due_date}
@@ -136,13 +120,25 @@ const Edit = ({ tasks, updateTask, currentUser }) => {
               />
             </FormGroup>
           </Col>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="task_descr">Task Description:</Label>
+              <textarea className ="textarea"
+                id="task_descr"
+                name="task_descr"
+                placeholder={currentTask?.task_descr}
+                type="text"
+                onChange={handleChange}
+                value={editTask.task_descr}
+              />
+            </FormGroup>
+          </Col>
         </Row>
-
         <FormGroup>
           <Label for="user_id" hidden>
             User Id
           </Label>
-          <Input
+          <Input 
             id="user_id"
             name="user_id"
             onChange={handleChange}
