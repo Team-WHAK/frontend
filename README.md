@@ -9,7 +9,7 @@
   <em>Will, Halie, Aubrey, Kyle</em>
   </br>
   </br>
-    live version link
+    https://honey-home.onrender.com/
   </p>
 <br/>
 <h2>
@@ -82,6 +82,10 @@
           rsuite: ^5.35.1
           </br>
           web-vitals: ^2.1.0
+          </br>
+          yarn add env-cmd
+          </br>
+          yarn install
       </p>
   </p>  
 </h2>
@@ -89,8 +93,8 @@
 </br>
 <h3>
   <p align="center">
-    <strong>Icebox Features</strong> </br>
-    <img src="https://img.freepik.com/free-vector/scene-with-three-penguins-ice_1308-40356.jpg?size=626&ext=jpg&ga=GA1.2.1986265976.1688416557&semt=ais">
+    <strong>Additional Features</strong> </br>
+    <img src="https://img.freepik.com/free-vector/abstract-coming-soon-halftone-style-background-design_1017-27282.jpg">
   </p>
    <ul>
     <li>A calendar feature that will link to personal one such as Google Calendar, etc</li>
