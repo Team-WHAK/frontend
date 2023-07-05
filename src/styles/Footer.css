@@ -2,8 +2,8 @@
   background-color: black;
   text-align: left;
   font-size: 25px;
+  padding-bottom: 30px;
 }
-
 
 #conc {
   background-color: #010101;
@@ -13,11 +13,12 @@
 
 
 .soc {
-  padding-top: 0.5vw;
+  padding-top: .5vw;
   margin-right: 93px;
 }
 .TM{
   margin-left: 90px;
   width: 100vw;
   overflow: hidden !important;
+  font-size: 25px;
 }
